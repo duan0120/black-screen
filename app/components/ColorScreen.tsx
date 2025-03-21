@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
-import Link from 'next/link'
 
 interface ColorScreenProps {
   backgroundColor: string
@@ -62,15 +61,15 @@ export default function ColorScreen({ backgroundColor, children }: ColorScreenPr
         }
       )}>
         <div className='flex items-center'>
-            <div className='flex-auto'></div>
-            <button onClick={() => setShowModal(false)} className='cursor-pointer'>
-                <Image src="/close.svg" width={24} height={24} alt={'close'} />
-            </button>
+          <div className='flex-auto'></div>
+          <button onClick={() => setShowModal(false)} className='cursor-pointer'>
+            <Image src="/close.svg" width={24} height={24} alt={'close'} />
+          </button>
         </div>
         <div className="modal">{children}</div>
         <ul className='mt-10'>
-            <li><a href="https://blog.crazykids.tech/" target="_blank">CrazyKids’s Blog</a></li>
-            <li><a href="https://www.crazykids.tech" target="_blank">Memora - Read it later</a></li>
+          <li><a href="https://blog.crazykids.tech/" target="_blank">CrazyKids’s Blog</a></li>
+          <li><a href="https://www.crazykids.tech" target="_blank">Memora - Read it later</a></li>
         </ul>
       </div>
       <div 
