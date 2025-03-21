@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "author": "duanhongjin",
-  "description": "Enter Blackscreennow.space and feel the ultimate charm of black screen.",
+  "description": "Enter Blackscreennow.space and experience the ultimate charm of black screen.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
