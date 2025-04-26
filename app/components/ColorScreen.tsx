@@ -71,6 +71,7 @@ export default function ColorScreen({ backgroundColor, children }: ColorScreenPr
           <li><a href="https://blog.crazykids.tech/" target="_blank">CrazyKids’s Blog</a></li>
           <li><a href="https://www.crazykids.tech" target="_blank">Memora - Read it later</a></li>
         </ul>
+        <a href="/" title="Full Screen Color Tool" className='mt-10'>Back to All Colors</a>
       </div>
       <div 
         onClick={() => setShowModal(true)}
