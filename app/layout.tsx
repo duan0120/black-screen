@@ -13,12 +13,12 @@ const schemaData = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Blackscreen.space: Switch Black, White, Red, Green, Blue, Yellow",
+    default: "Blackscreen.space: Full Screen Colors",
     template: "%s | Blackscreen.space",  
   },
   description: "Free full screen color tool: black, white, red, green, blue, yellow screens. Double-click for full screen, use arrow keys to switch colors for focus, testing, or creative uses.",
   openGraph: {
-    title: "Blackscreen.space: Switch Black, White, Red, Green, Blue, Yellow",
+    title: "Blackscreen.space: Full Screen Colors",
     description: "Free full screen color tool: black, white, red, green, blue, yellow screens. Double-click for full screen, use arrow keys to switch colors for focus, testing, or creative uses.",
     url: "https://www.blackscreennow.space",
     siteName: "Blackscreen.space",
