@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "BlackScreenNow",
+  "name": "BlackScreen.space",
   "operatingSystem": "Web",
   "applicationCategory": "Utility",
   "description": "Full screen color tool with black, white, red, green, blue, yellow screens. Double-click for full screen, switch colors with arrow keys for focus, testing, or creative uses."
@@ -13,15 +13,15 @@ const schemaData = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Full Screen Colors: Switch Black, White, Red, Green, Blue, Yellow",
-    template: "%s | Black Screen",  
+    default: "Blackscreen.space: Switch Black, White, Red, Green, Blue, Yellow",
+    template: "%s | Blackscreen.space",  
   },
   description: "Free full screen color tool: black, white, red, green, blue, yellow screens. Double-click for full screen, use arrow keys to switch colors for focus, testing, or creative uses.",
   openGraph: {
-    title: "Full Screen Colors: Switch Black, White, Red, Green, Blue, Yellow",
+    title: "Blackscreen.space: Switch Black, White, Red, Green, Blue, Yellow",
     description: "Free full screen color tool: black, white, red, green, blue, yellow screens. Double-click for full screen, use arrow keys to switch colors for focus, testing, or creative uses.",
     url: "https://www.blackscreennow.space",
-    siteName: "Black Screen",
+    siteName: "Blackscreen.space",
     images: "/imgs/black-logo.png",
   },
 };

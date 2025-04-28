@@ -1,7 +1,7 @@
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "BlackScreenNow - Blue Screen",
+  "name": "BlackScreen.space - Blue Screen",
   "operatingSystem": "Web",
   "applicationCategory": "Utility",
   "description": "Full blue screen tool for focused work or eye comfort. Double-click for full screen, switch colors with arrow keys."

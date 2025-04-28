@@ -13,7 +13,7 @@ export const metadata = {
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "BlackScreenNow - Green Screen",
+  "name": "BlackScreen.space - Green Screen",
   "operatingSystem": "Web",
   "applicationCategory": "Utility",
   "description": "Full green screen tool for video backgrounds or display testing. Double-click for full screen, switch colors with arrow keys."

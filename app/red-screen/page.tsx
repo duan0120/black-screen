@@ -2,7 +2,7 @@ import ColorScreen from '../components/ColorScreen'
 
 export default function RedScreen() {
   return <ColorScreen backgroundColor="red">
-    <h1>Blackscreennow.space</h1>
+    <h1>Blackscreen.space</h1>
     <p>Discover Blackscreen.space, where the vibrant and captivating essence of red comes to life. We recognize red as a compelling color, rich with meanings and associations. Blackscreen.space offers a dynamic platform centered on red screens, igniting powerful emotions, boosting energy, and enhancing visuals to enrich your digital experience.</p>
 
     <h2>The Psychological Impact of Red Screen</h2>

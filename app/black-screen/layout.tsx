@@ -1,7 +1,7 @@
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "BlackScreenNow - Black Screen",
+  "name": "BlackScreen.space - Black Screen",
   "operatingSystem": "Web",
   "applicationCategory": "Utility",
   "description": "Full black screen tool for focus, eye relaxation, OLED power saving, or dead pixel testing. Double-click for full screen, switch colors with arrow keys." 

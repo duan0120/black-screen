@@ -2,7 +2,7 @@ import ColorScreen from '../components/ColorScreen'
 
 export default function YellowScreen() {
   return <ColorScreen backgroundColor="yellow">
-    <h1>Blackscreennow.space</h1>
+    <h1>Blackscreen.space</h1>
     <p>Step into Blackscreen.space, where the warmth and energy of yellow come alive. We understand yellow’s psychological power—representing happiness, sunshine, and positivity. Blackscreen.space offers a versatile platform built around yellow screens, boosting motivation, vitality, and visual clarity to enhance your digital experience.</p>
 
     <h2>The Uplifting and Energetic Nature of Yellow Screen</h2>

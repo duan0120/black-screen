@@ -13,7 +13,7 @@ export const metadata = {
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "BlackScreenNow - White Screen",
+  "name": "BlackScreen.space - White Screen",
   "operatingSystem": "Web",
   "applicationCategory": "Utility",
   "description": "Full white screen tool for display testing or screen cleaning. Double-click for full screen, switch colors with arrow keys."
