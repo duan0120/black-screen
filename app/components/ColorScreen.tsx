@@ -68,18 +68,20 @@ export default function ColorScreen({ backgroundColor, children }: ColorScreenPr
           </button>
         </div>
         <div className="modal">{children}</div>
-        <ul className='mt-10'>
-          <li><Link href="https://blog.crazykids.tech/" target="_blank">CrazyKids’s Blog</Link></li>
-          <li><Link href="https://www.crazykids.tech" target="_blank">Memora - Read it later</Link></li>
-        </ul>
-        <Link href="/" title="Full Screen Color Tool" className='mt-10'>Back to All Colors</Link>
-      </div>
-      <div 
+        <div className='mt-10 flex items-center border-t pt-4 w-full'>
+          <Link href="https://blog.crazykids.tech" target="_blank">CrazyKids’s Blog</Link>
+          <span className="mx-2">•</span>
+          <Link href="https://www.memora.top" target="_blank">Memora - Read it later</Link>
+          <span className="mx-2">•</span>
+          <Link href="/" title="Black Screen Tool & Full Screen Colors">Back to Black Screen Tool</Link>
+        </div>
+      </div >
+      <div
         onClick={() => setShowModal(true)}
         className="absolute right-4 bottom-4 cursor-pointer p-2 opacity-0 transition-opacity duration-300 hover:opacity-100"
       >
         <Image src="/info.svg" width={24} height={24} alt={'info'} />
       </div>
-    </div>
+    </div >
   )
 } 
