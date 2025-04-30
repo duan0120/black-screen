@@ -1,20 +1,20 @@
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "BlackScreen.space - Blue Screen",
+  "name": "Blue Screen Focus Tool",
   "operatingSystem": "Web",
   "applicationCategory": "Utility",
-  "description": "Full blue screen tool for focused work or eye comfort. Double-click for full screen, switch colors with arrow keys."
+  "description": "Free blue screen focus tool for focus or eye comfort. Double-click for full screen, switch colors with arrow keys."
 };
 
 export const metadata = {
-  title: "Full Blue Screen: Focus & Eye Comfort",
-  description: "Free full blue screen for focused work or eye comfort. Ideal for coding, studying, or calming display testing.",
+  title: "Blue Screen Focus Tool",
+  description: "Free blue screen focus tool for focus or eye comfort. Double-click for full screen, switch colors with arrow keys.",
   openGraph: {
-    title: "Full Blue Screen: Focus & Eye Comfort",
-    description: "Free full blue screen for focused work or eye comfort. Ideal for coding, studying, or calming display testing.",
+    title: "Blue Screen Focus Tool",
+    description: "Free blue screen focus tool for focus or eye comfort. Double-click for full screen, switch colors with arrow keys.",
     url: "https://www.blackscreennow.space/blue-screen",
-    siteName: "Black Screen",
+    siteName: "Black Screen Tool",
     images: "/imgs/blue-logo.png",
   },
 }
@@ -23,10 +23,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <head>
-        <script  type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       </head>
       {children}
     </>
   )
 }
-  

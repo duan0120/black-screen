@@ -5,21 +5,18 @@ import { Analytics } from "@vercel/analytics/react";
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "BlackScreen.space",
+  "name": "Black Screen Tool",
   "operatingSystem": "Web",
   "applicationCategory": "Utility",
-  "description": "Full screen color tool with black, white, red, green, blue, yellow screens. Double-click for full screen, switch colors with arrow keys for focus, testing, or creative uses."
+  "description": "Free black screen tool for focus, testing, or OLED power saving. Explore full screen colors: black, white, red, green, blue, yellow. Double-click to switch."
 };
 
 export const metadata: Metadata = {
-  title: {
-    default: "Blackscreen.space: Full Screen Colors",
-    template: "%s | Blackscreen.space",  
-  },
-  description: "Free full screen color tool: black, white, red, green, blue, yellow screens. Double-click for full screen, use arrow keys to switch colors for focus, testing, or creative uses.",
+  title: "Black Screen Tool & Full Screen Colors",
+  description: "Free black screen tool for focus, testing, or OLED power saving. Explore full screen colors: black, white, red, green, blue, yellow. Double-click to switch.",
   openGraph: {
-    title: "Blackscreen.space: Full Screen Colors",
-    description: "Free full screen color tool: black, white, red, green, blue, yellow screens. Double-click for full screen, use arrow keys to switch colors for focus, testing, or creative uses.",
+    title: "Black Screen Tool & Full Screen Colors",
+    description: "Free black screen tool for focus, testing, or OLED power saving. Explore full screen colors: black, white, red, green, blue, yellow. Double-click to switch.",
     url: "https://www.blackscreennow.space",
     siteName: "Blackscreen.space",
     images: "/imgs/black-logo.png",

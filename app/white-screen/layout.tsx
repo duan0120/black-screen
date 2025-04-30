@@ -1,29 +1,29 @@
 export const metadata = {
-  title: "Full White Screen: Display Test & Screen Cleaning",
-  description: "Free full white screen for display testing or screen cleaning. Perfect for designers and tech users to check monitors.",
+  title: "White Screen Test Tool",
+  description: "Free white screen test tool for display testing or screen cleaning. Double-click for full screen, switch colors with arrow keys.",
   openGraph: {
-    title: "Full White Screen: Display Test & Screen Cleaning",
-    description: "Free full white screen for display testing or screen cleaning. Perfect for designers and tech users to check monitors.",
+    title: "White Screen Test Tool",
+    description: "Free white screen test tool for display testing or screen cleaning. Double-click for full screen, switch colors with arrow keys.",
     url: "https://www.blackscreennow.space/white-screen",
-    siteName: "Black Screen",
+    siteName: "Black Screen Tool",
     images: "/imgs/white-logo.png",
   },
 }
-  
+
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "BlackScreen.space - White Screen",
+  "name": "White Screen Test Tool",
   "operatingSystem": "Web",
   "applicationCategory": "Utility",
-  "description": "Full white screen tool for display testing or screen cleaning. Double-click for full screen, switch colors with arrow keys."
+  "description": "Free white screen test tool for display testing or screen cleaning. Double-click for full screen, switch colors with arrow keys."
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <head>
-        <script  type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       </head>
       {children}
     </>

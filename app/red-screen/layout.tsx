@@ -1,29 +1,29 @@
 export const metadata = {
-  title: "Full Red Screen: Creative Lighting & Focus",
-  description: "Free full red screen for creative lighting or focused work. Ideal for video calls, photography, or warm ambiance.",
+  title: "Red Screen Lighting Tool",
+  description: "Free red screen lighting tool for creative lighting or focus. Double-click for full screen, switch colors with arrow keys.",
   openGraph: {
-    title: "Full Red Screen: Creative Lighting & Focus",
-    description: "Free full red screen for creative lighting or focused work. Ideal for video calls, photography, or warm ambiance.",
+    title: "Red Screen Lighting Tool",
+    description: "Free red screen lighting tool for creative lighting or focus. Double-click for full screen, switch colors with arrow keys.",
     url: "https://www.blackscreennow.space/red-screen",
-    siteName: "Black Screen",
+    siteName: "Black Screen Tool",
     images: "/imgs/red-logo.png",
   },
 }
-  
+
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "BlackScreen.space - Red Screen",
+  "name": "Red Screen Lighting Tool",
   "operatingSystem": "Web",
   "applicationCategory": "Utility",
-  "description": "Full red screen tool for creative lighting or focused work. Double-click for full screen, switch colors with arrow keys."
+  "description": "Free red screen lighting tool for creative lighting or focus. Double-click for full screen, switch colors with arrow keys."
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <head>
-        <script  type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       </head>
       {children}
     </>

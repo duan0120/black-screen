@@ -1,29 +1,29 @@
 export const metadata = {
-  title: "Full Yellow Screen: Focus & Eye Relaxation",
-  description: "Free full yellow screen for focus or eye relaxation. Perfect for warm lighting and distraction-free work.",
+  title: "Yellow Screen Relaxation Tool",
+  description: "Free yellow screen relaxation tool for focus or eye relaxation. Double-click for full screen, switch colors with arrow keys.",
   openGraph: {
-    title: "Full Yellow Screen: Focus & Eye Relaxation",
-    description: "Free full yellow screen for focus or eye relaxation. Perfect for warm lighting and distraction-free work.",
+    title: "Yellow Screen Relaxation Tool",
+    description: "Free yellow screen relaxation tool for focus or eye relaxation. Double-click for full screen, switch colors with arrow keys.",
     url: "https://www.blackscreennow.space/yellow-screen",
-    siteName: "Black Screen",
+    siteName: "Black Screen Tool",
     images: "/imgs/yellow-logo.png",
   },
 }
-  
+
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "BlackScreen.space - Yellow Screen",
+  "name": "Yellow Screen Relaxation Tool",
   "operatingSystem": "Web",
   "applicationCategory": "Utility",
-  "description": "Full yellow screen tool for focus or eye relaxation. Double-click for full screen, switch colors with arrow keys."
+  "description": "Free yellow screen relaxation tool for focus or eye relaxation. Double-click for full screen, switch colors with arrow keys."
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <head>
-        <script  type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       </head>
       {children}
     </>
