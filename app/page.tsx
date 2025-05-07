@@ -58,6 +58,12 @@ export default function Home() {
           <a href="https://blog.crazykids.tech">CrazyKids’s Blog</a>
           <span className="ml-2 mr-2">•</span>
           <a href="https://www.memora.top">Memora</a>
+          <span className="ml-2 mr-2">•</span>
+          <a href="/privacy">Privacy Policy</a>
+          <span className="ml-2 mr-2">•</span>
+          <a href="terms">Terms Service</a>
+          <span className="ml-2 mr-2">•</span>
+          <a href="contact">Contact</a>
         </div>
       </footer>
     </div>
