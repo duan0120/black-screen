@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -31,6 +32,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-03MH0BST7J" strategy="afterInteractive"></Script>
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-03MH0BST7J');
+          `,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
