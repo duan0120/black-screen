@@ -69,7 +69,7 @@ export default function ColorScreen({ backgroundColor, children }: ColorScreenPr
         </div>
         <div className="modal">{children}</div>
         <div className='mt-10 flex items-center border-t pt-4 w-full'>
-          <Link href="https://www.crazykids.tech" target="_blank">CrazyKids’s Blog</Link>
+          <Link href="https://blog.crazykids.tech" target="_blank">CrazyKids’s Blog</Link>
           <span className="mx-2">•</span>
           <Link href="https://www.memora.top" target="_blank">Memora - Read it later</Link>
           <span className="mx-2">•</span>

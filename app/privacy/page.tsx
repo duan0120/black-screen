@@ -3,7 +3,7 @@ export default function Privacy() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold mb-4">Privacy Policy for DevUtils</h1>
       <p className="text-sm text-gray-500">Last Updated: May 6, 2025</p>
-      <p>At DevUtils (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you use our website, <a href="https://www.crazykids.tech" className="text-blue-500 hover:underline">www.crazykids.tech</a>, including our timestamp conversion tool (the &quot;Service&quot;). By using the Service, you agree to the terms of this Privacy Policy.</p>
+      <p>At DevUtils (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you use our website, <a href="https://blog.crazykids.tech" className="text-blue-500 hover:underline">blog.crazykids.tech</a>, including our timestamp conversion tool (the &quot;Service&quot;). By using the Service, you agree to the terms of this Privacy Policy.</p>
       <h2 className="text-lg font-bold mt-4">1. Information We Collect</h2>
       <h3 className="text-base font-bold mt-2">1.1 Personal Information</h3>
       <p>We may collect personal information you voluntarily provide, such as:</p>

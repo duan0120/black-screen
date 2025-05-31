@@ -3,7 +3,7 @@ export default function Terms() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold mb-4">Terms of Service for DevUtils</h1>
       <p className="text-sm text-gray-500">Last Updated: May 6, 2025</p>
-      <p>Welcome to DevUtils (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website, <a href="https://www.crazykids.tech" className="text-blue-500 hover:underline">www.crazykids.tech</a>, including our timestamp conversion tool (the &quot;Service&quot;). By accessing or using the Service, you agree to be bound by these Terms. If you do not agree, please do not use the Service.</p>
+      <p>Welcome to DevUtils (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website, <a href="https://blog.crazykids.tech" className="text-blue-500 hover:underline">blog.crazykids.tech</a>, including our timestamp conversion tool (the &quot;Service&quot;). By accessing or using the Service, you agree to be bound by these Terms. If you do not agree, please do not use the Service.</p>
       <h2 className="text-lg font-bold mt-4">1. Acceptance of Terms</h2>
       <p>By using the Service, you confirm that you are at least 13 years old and have the legal capacity to enter into these Terms. If you are using the Service on behalf of an organization, you represent that you have authority to bind that organization.</p>
       <h2 className="text-lg font-bold mt-4">2. Use of the Service</h2>
