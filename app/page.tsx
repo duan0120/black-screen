@@ -55,9 +55,11 @@ export default function Home() {
       <footer className="p-5 mt-10">
         <p className="block text-base text-[#666] mt-0 mr-auto mb-5 ml-auto">© 2025 CrazyKids. All rights reserved.</p>
         <div>
-          <a href="https://blog.crazykids.tech">CrazyKids’s Blog</a>
+          <a href="https://twittervideoindir.com" title="TwitterXVideo" target="_blank">TwitterXVideo</a>
           <span className="ml-2 mr-2">•</span>
-          <a href="https://www.memora.top">Memora</a>
+          <a href="https://blog.crazykids.tech" target="_blank">CrazyKids’s Blog</a>
+          <span className="ml-2 mr-2">•</span>
+          <a href="https://www.memora.top" target="_blank">Memora</a>
           <span className="ml-2 mr-2">•</span>
           <a href="/privacy">Privacy Policy</a>
           <span className="ml-2 mr-2">•</span>
