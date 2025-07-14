@@ -70,11 +70,13 @@ export default function ColorScreen({ backgroundColor, children }: ColorScreenPr
         <div className='mt-10 flex items-center border-t pt-4 w-full'>
           <Link href="https://twittervideoindir.com" title="TwitterXVideo" target="_blank">TwitterXVideo</Link>
           <span className="mx-2">•</span>
-          <Link href="https://blog.crazykids.tech" target="_blank">CrazyKids’s Blog</Link>
+          <Link href="https://blog.crazykids.tech" target="_blank">我的碎碎念</Link>
           <span className="mx-2">•</span>
           <Link href="https://www.memora.top" target="_blank">Memora - Read it later</Link>
           <span className="mx-2">•</span>
           <Link href="/" title="Black Screen Tool & Full Screen Colors">Back to Black Screen Tool</Link>
+          <span className="mx-2">•</span>
+          <Link href="https://crazykids.tech" target="_blank">乘风客的分享</Link>
         </div>
       </div >
       <div
