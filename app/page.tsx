@@ -61,6 +61,8 @@ export default function Home() {
           <span className="ml-2 mr-2">•</span>
           <a href="https://www.memora.top" target="_blank">Memora</a>
           <span className="ml-2 mr-2">•</span>
+          <a href="https://brat-gen.com" target="_blank">Brat-Gen</a>
+          <span className="ml-2 mr-2">•</span>
           <a href="/privacy">Privacy Policy</a>
           <span className="ml-2 mr-2">•</span>
           <a href="terms">Terms Service</a>

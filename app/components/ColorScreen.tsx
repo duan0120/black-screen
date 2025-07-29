@@ -77,6 +77,8 @@ export default function ColorScreen({ backgroundColor, children }: ColorScreenPr
           <Link href="/" title="Black Screen Tool & Full Screen Colors">Back to Black Screen Tool</Link>
           <span className="mx-2">•</span>
           <Link href="https://crazykids.tech" target="_blank">乘风客的分享</Link>
+          <span className="mx-2">•</span>
+          <Link href="https://brat-gen.com" target="_blank">Brat-Gen</Link>
         </div>
       </div >
       <div
