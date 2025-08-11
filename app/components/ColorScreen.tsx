@@ -68,7 +68,7 @@ export default function ColorScreen({ backgroundColor, children }: ColorScreenPr
         </div>
         <div className="modal">{children}</div>
         <div className='mt-10 flex items-center border-t pt-4 w-full'>
-          <Link href="https://twittervideoindir.com" title="TwitterXVideo" target="_blank">TwitterXVideo</Link>
+          <Link href="https://twittervideoindir.com" title="TwitterXVideo" target="_blank">Download Twitter Video</Link>
           <span className="mx-2">•</span>
           <Link href="https://blog.crazykids.tech" target="_blank">我的碎碎念</Link>
           <span className="mx-2">•</span>
@@ -78,7 +78,9 @@ export default function ColorScreen({ backgroundColor, children }: ColorScreenPr
           <span className="mx-2">•</span>
           <Link href="https://crazykids.tech" target="_blank">乘风客的分享</Link>
           <span className="mx-2">•</span>
-          <Link href="https://brat-gen.com" target="_blank">Brat-Gen</Link>
+          <Link href="https://brat-gen.com" target="_blank">Brat Generator</Link>
+          <span className="mx-2">•</span>
+          <Link href="https://timestamps.top" target="_blank">Unix Timestamp Converter</Link>
         </div>
       </div >
       <div

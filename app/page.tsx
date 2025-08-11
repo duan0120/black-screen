@@ -55,13 +55,15 @@ export default function Home() {
       <footer className="p-5 mt-10">
         <p className="block text-base text-[#666] mt-0 mr-auto mb-5 ml-auto">© 2025 CrazyKids. All rights reserved.</p>
         <div>
-          <a href="https://twittervideoindir.com" title="TwitterXVideo" target="_blank">TwitterXVideo</a>
+          <a href="https://twittervideoindir.com" title="TwitterXVideo" target="_blank">Download Twitter Video</a>
           <span className="ml-2 mr-2">•</span>
           <a href="https://blog.crazykids.tech" target="_blank">CrazyKids’s Blog</a>
           <span className="ml-2 mr-2">•</span>
           <a href="https://www.memora.top" target="_blank">Memora</a>
           <span className="ml-2 mr-2">•</span>
-          <a href="https://brat-gen.com" target="_blank">Brat-Gen</a>
+          <a href="https://brat-gen.com" target="_blank">Brat Generator</a>
+          <span className="ml-2 mr-2">•</span>
+          <a href="https://timestamps.top" target="_blank">Unix Timestamp Converter</a>
           <span className="ml-2 mr-2">•</span>
           <a href="/privacy">Privacy Policy</a>
           <span className="ml-2 mr-2">•</span>
