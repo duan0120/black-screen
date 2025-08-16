@@ -38,7 +38,7 @@ export default function MyFooter({ locale = 'en' }) {
 
   const friendsLink = [
     {
-      name: "TwitterXVideo",
+      name: "Download Twitter Video",
       url: "https://twittervideoindir.com",
     },
     {
@@ -57,10 +57,10 @@ export default function MyFooter({ locale = 'en' }) {
       <div className="page-container p-10 flex flex-col md:flex-row justify-between gap-4">
         <div className="flex flex-col gap-2 w-full md:w-1/3">
           <div className="flex items-center gap-1">
-            <p className="text-xl font-bold mb-2 w-fit">{t('Brat-Gen')}</p>
+            <p className="text-xl font-bold mb-2 w-fit">Black Screen Tool</p>
             <Link href="/" target="_blank"><Chip color="danger" size="sm" variant="flat" className="ml-2 -mt-1.5">v{process.env.APP_VERSION}</Chip></Link>
           </div>
-          <p className="text-sm text-gray-500 mb-7">{t('Brat-Gen is a free Brat Generator! Create custom Brat-style covers with vibrant colors like Brat Green. Share bold designs on social media!')}</p>
+          <p className="text-sm text-gray-500 mb-7">{t('')}</p>
           <div className='flex gap-4'>
             {socialLinks.map((item, index) => (
               <Link href={item.url} target="_blank" key={index}
@@ -102,7 +102,7 @@ export default function MyFooter({ locale = 'en' }) {
       </div>
       <div className="page-container p-10">
         <Divider className="my-4" />
-        <p className="text-sm text-gray-500">© 2025 <a href="https://brat-gen.com" target="_blank">Bart-Gen</a> {t('All rights reserved.')}</p>
+        <p className="text-sm text-gray-500">© 2025 <a href="https://black-screen.cc" target="_blank">Black Screen Tool</a> {t('All rights reserved.')}</p>
       </div>
     </>
   )

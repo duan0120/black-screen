@@ -8,15 +8,15 @@ export default function UserFeedback({ locale = 'en' }) {
 
   const userFeedbacks = [
     {
-      name: 'Maya Chen',
-      title: t('Social Media Explorer'),
-      description: t('Brat-Gen’s Brat Generator is a game-changer! I create Brat-style covers with Brat Green (#8ACE00) and share them on X and Instagram, boosting my Brat Summer posts’ viral reach.'),
+      name: '',
+      title: t(''),
+      description: t(''),
     },
   ]
 
   return (
     <>
-      <h3 className="text-2xl font-bold px-2 py-4">{t('User Reviews of Our Unix Timestamp Converter')}</h3>
+      <h3 className="text-2xl font-bold px-2 py-4">{t('')}</h3>
       <div className="flex flex-wrap gap-8 justify-between">
         {userFeedbacks.map((feedback, index) => (
           <Card

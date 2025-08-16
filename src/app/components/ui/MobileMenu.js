@@ -33,9 +33,9 @@ export default function MobileMenu({ locale }) {
           <DrawerBody>
             <div className="flex flex-col gap-4 p-4">
               <Link href="/" className="text-lg text-foreground hover:text-primary flex items-center" onClick={handleLinkClick}>
-                <img src="/images/logo.png" alt="Brat-Gen" width={32} height={32} />
+                <img src="/images/logo.png" alt="Black-Screen-Tool" width={32} height={32} />
                 <p className="font-bold text-inherit mx-3 text-2xl">
-                  {t('Brat-Gen')}
+                  Black Screen Tool
                 </p>
               </Link>
               <Link href="/blog" className="text-lg text-foreground hover:text-primary" onClick={handleLinkClick}>

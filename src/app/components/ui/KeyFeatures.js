@@ -8,14 +8,14 @@ export default function KeyFeatures({ locale = 'en' }) {
 
   const keyFeatures = [
     {
-      title: t("Completely Free Brat Generator"),
-      description: t("Design stunning Brat-style covers at no cost with Brat-Gen’s Brat Generator, empowering fans to explore art without barriers."),
+      title: t(""),
+      description: t(""),
     },
   ]
 
   return (
     <>
-      <h3 className="text-2xl font-bold px-2 py-4">{t('Key Features of Our Unix Timestamp Converter')}</h3>
+      <h3 className="text-2xl font-bold px-2 py-4">{t('Key Features of Our Black Screen Tool')}</h3>
       < div className="flex flex-wrap gap-8 justify-between md:justify-start" >
         {
           keyFeatures.map((feature) => (

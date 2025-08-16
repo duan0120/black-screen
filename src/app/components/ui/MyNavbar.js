@@ -22,9 +22,9 @@ export default function MyNavbar({ locale = 'en' }) {
     }}>
       <NavbarBrand>
         <Link href="/" className="text-foreground">
-          <img src="/images/logo.png" alt="Brat-Gen" width={32} height={32} />
+          <img src="/images/logo.png" alt="Black-Screen-Tool" width={32} height={32} />
           <p className="font-bold text-inherit mx-3 text-2xl">
-            {t('Brat-Gen')}
+            Black Screen Tool
           </p>
         </Link>
       </NavbarBrand>

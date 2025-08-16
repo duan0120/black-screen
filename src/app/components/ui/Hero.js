@@ -8,12 +8,12 @@ export default function Hero({ locale = 'en' }) {
 
 
   return (
-    <div className="text-center pt-16 pb-2">
+    <div className="text-center pt-10 pb-2">
       <h1 className="text-5xl font-bold text-primary mb-2">
-        {t('Brat Generator')}
+        {t('Black Screen Tool')}
       </h1>
       <p className="text-3xl text-subtext mb-8">
-        {t('Unleash Your Brat Vibe')}
+        {t('')}
       </p>
     </div>
   );

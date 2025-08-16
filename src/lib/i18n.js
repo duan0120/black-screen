@@ -8,7 +8,6 @@ import ptLocales from '../locales/pt.json';
 import itLocales from '../locales/it.json';
 import frLocales from '../locales/fr.json';
 import deLocales from '../locales/de.json';
-import thLocales from '../locales/th.json';
 import trLocales from '../locales/tr.json';
 
 export const locales = {
@@ -51,10 +50,6 @@ export const locales = {
   "de": {
     name: "Deutsch",
     locales: deLocales
-  },
-  "th": {
-    name: "ไทย",
-    locales: thLocales
   },
   "tr": {
     name: "Türkçe",

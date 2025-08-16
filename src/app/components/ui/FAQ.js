@@ -9,15 +9,15 @@ export default function FAQ({ locale = 'en' }) {
 
   const faq = [
     {
-      label: "What is Brat-Gen?",
-      question: t("What is Brat-Gen?"),
-      answer: t("Brat-Gen is a free Brat Generator celebrating Brat’s raw, vibrant aesthetic, letting you craft Brat-style covers with bold fonts and colors like Brat Green (#8ACE00)."),
+      label: "",
+      question: t(""),
+      answer: t(""),
     },
   ]
 
   return (
     <>
-      <h3 className="text-2xl font-bold px-2 py-4">{t('Frequently Asked Questions about Unix Timestamp Converter')}</h3>
+      <h3 className="text-2xl font-bold px-2 py-4">{t('Frequently Asked Questions About Black Screen Tool')}</h3>
       < Accordion
         selectionMode="multiple"
         className="border-foreground/10 border-[1px] rounded-2xl px-6"

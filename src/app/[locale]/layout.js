@@ -12,17 +12,17 @@ import baseCanonical from "@/lib/baseCanonical";
 
 
 export async function generateMetadata({ params }) {
-  const title = 'Brat-Gen - Free Brat Generator for Custom Covers';
-  const description = 'Brat-Gen is a free Brat Generator! Create custom Brat-style covers with vibrant colors like Brat Green. Share bold designs on social media!';
+  const title = 'Black Screen Tool - Focus, OLED Protection & Testing';
+  const description = 'Free Black Screen Tool for focus, OLED power saving, and display testing. Use black, white, red, green, blue, and more for pixel checks and downloads.';
   const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/og.png`;
 
   return {
     title: {
       default: title,
-      template: '%s | Brat-Gen'
+      template: '%s | Black Screen Tool'
     },
     description: description,
-    authors: [{ name: 'Brat-Gen' }],
+    authors: [{ name: 'Black Screen Tool' }],
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
     alternates: {
       canonical: baseCanonical(params.locale),
@@ -32,14 +32,14 @@ export async function generateMetadata({ params }) {
       description: description,
       type: 'website',
       url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
-      siteName: 'Brat-Gen',
+      siteName: 'Black Screen Tool',
       images: [{
         url: image
       }]
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@Brat-Gen',
+      site: '@Black Screen Tool',
       title: title,
       description: description,
       images: [image]
