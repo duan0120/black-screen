@@ -24,7 +24,7 @@ export default function MyNavbar({ locale = 'en' }) {
         <Link href="/" className="text-foreground">
           <img src="/images/logo.png" alt="Black-Screen-Tool" width={32} height={32} />
           <p className="font-bold text-inherit mx-3 text-2xl">
-            Black Screen Tool
+            Black Screen
           </p>
         </Link>
       </NavbarBrand>

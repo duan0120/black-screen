@@ -57,7 +57,7 @@ export default function MyFooter({ locale = 'en' }) {
       <div className="page-container p-10 flex flex-col md:flex-row justify-between gap-4">
         <div className="flex flex-col gap-2 w-full md:w-1/3">
           <div className="flex items-center gap-1">
-            <p className="text-xl font-bold mb-2 w-fit">Black Screen Tool</p>
+            <p className="text-xl font-bold mb-2 w-fit">Black Screen</p>
             <Link href="/" target="_blank"><Chip color="danger" size="sm" variant="flat" className="ml-2 -mt-1.5">v{process.env.APP_VERSION}</Chip></Link>
           </div>
           <p className="text-sm text-gray-500 mb-7">{t('')}</p>
@@ -102,7 +102,7 @@ export default function MyFooter({ locale = 'en' }) {
       </div>
       <div className="page-container p-10">
         <Divider className="my-4" />
-        <p className="text-sm text-gray-500">© 2025 <a href="https://black-screen.cc" target="_blank">Black Screen Tool</a> {t('All rights reserved.')}</p>
+        <p className="text-sm text-gray-500">© 2025 <a href="https://black-screen.cc" target="_blank">Black Screen</a> {t('All rights reserved.')}</p>
       </div>
     </>
   )

@@ -35,7 +35,7 @@ export default function MobileMenu({ locale }) {
               <Link href="/" className="text-lg text-foreground hover:text-primary flex items-center" onClick={handleLinkClick}>
                 <img src="/images/logo.png" alt="Black-Screen-Tool" width={32} height={32} />
                 <p className="font-bold text-inherit mx-3 text-2xl">
-                  Black Screen Tool
+                  Black Screen
                 </p>
               </Link>
               <Link href="/blog" className="text-lg text-foreground hover:text-primary" onClick={handleLinkClick}>

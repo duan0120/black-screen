@@ -12,17 +12,17 @@ import baseCanonical from "@/lib/baseCanonical";
 
 
 export async function generateMetadata({ params }) {
-  const title = 'Black Screen Tool - Focus, OLED Protection & Testing';
-  const description = 'Free Black Screen Tool for focus, OLED power saving, and display testing. Use black, white, red, green, blue, and more for pixel checks and downloads.';
+  const title = 'Black Screen - Fullscreen Focus, OLED & Pixel Testing';
+  const description = 'FFree Black Screen for fullscreen focus, OLED power saving, and display testing. Use black, white, red, green, and more for pixel checks and downloads.';
   const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/og.png`;
 
   return {
     title: {
       default: title,
-      template: '%s | Black Screen Tool'
+      template: '%s | Black Screen'
     },
     description: description,
-    authors: [{ name: 'Black Screen Tool' }],
+    authors: [{ name: 'Black Screen' }],
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
     alternates: {
       canonical: baseCanonical(params.locale),
@@ -32,14 +32,14 @@ export async function generateMetadata({ params }) {
       description: description,
       type: 'website',
       url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
-      siteName: 'Black Screen Tool',
+      siteName: 'Black Screen',
       images: [{
         url: image
       }]
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@Black Screen Tool',
+      site: '@Black Screen',
       title: title,
       description: description,
       images: [image]
