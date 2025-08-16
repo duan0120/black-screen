@@ -6,7 +6,46 @@ export default function MyFooter({ locale = 'en' }) {
     return getTranslation(locale, key);
   }
 
-  const title = '';
+  const quickLinks = [
+    {
+      name: t('Black Screen'),
+      url: '/',
+    },
+    {
+      name: t('White Screen'),
+      url: '/white-screen',
+    },
+    {
+      name: t('Red Screen'),
+      url: '/red-screen',
+    },
+    {
+      name: t('Green Screen'),
+      url: '/green-screen',
+    },
+    {
+      name: t('Blue Screen'),
+      url: '/blue-screen',
+    },
+    {
+      name: t('Yellow Screen'),
+      url: '/yellow-screen',
+    },
+    {
+      name: t('Orange Screen'),
+      url: '/orange-screen',
+    },
+    {
+      name: t('Pink Screen'),
+      url: '/pink-screen',
+    },
+    {
+      name: t('Purple Screen'),
+      url: '/purple-screen',
+    },
+  ];
+
+  const title = 'Black Screen - Fullscreen Focus, OLED & Pixel Testing';
 
   const socialLinks = [
     {
@@ -54,10 +93,10 @@ export default function MyFooter({ locale = 'en' }) {
   return (
     <>
       <Divider className="my-4" />
-      <div className="page-container p-10 flex flex-col md:flex-row justify-between gap-4">
+      <div className="nav-container flex flex-col md:flex-row justify-between gap-4">
         <div className="flex flex-col gap-2 w-full md:w-1/3">
           <div className="flex items-center gap-1">
-            <p className="text-xl font-bold mb-2 w-fit">Black Screen</p>
+            <p className="text-xl font-bold mb-2 w-fit">{t('Black Screen')}</p>
             <Link href="/" target="_blank"><Chip color="danger" size="sm" variant="flat" className="ml-2 -mt-1.5">v{process.env.APP_VERSION}</Chip></Link>
           </div>
           <p className="text-sm text-gray-500 mb-7">{t('')}</p>
@@ -69,6 +108,18 @@ export default function MyFooter({ locale = 'en' }) {
                 <img src={item.icon} alt={item.iconAlt} className='dark:invert' />
               </Link>
             ))}
+          </div>
+        </div>
+        <div className="flex flex-col gap-4">
+          <div>
+            <p className="font-bold mb-2">{t('Quick Links')}</p>
+            <ul className="flex flex-col gap-1">
+              {quickLinks.map((item, index) => (
+                <li key={index}>
+                  <Link href={item.url} className="text-sm hover:text-primary">{item.name}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
         <div className="flex flex-col gap-4">
@@ -100,7 +151,7 @@ export default function MyFooter({ locale = 'en' }) {
           </div>
         </div>
       </div>
-      <div className="page-container p-10">
+      <div className="nav-container">
         <Divider className="my-4" />
         <p className="text-sm text-gray-500">© 2025 <a href="https://black-screen.cc" target="_blank">Black Screen</a> {t('All rights reserved.')}</p>
       </div>

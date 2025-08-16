@@ -1,4 +1,5 @@
 import { getTranslation } from '@/lib/i18n';
+import Hero from '@/app/components/ui/Hero';
 
 
 export async function generateMetadata({ params }) {
@@ -42,7 +43,9 @@ export default function BlueScreenPage({ params }) {
 
   return (
     <div className="page-container py-8">
-
+      <div className="section">
+        <Hero locale={locale} color='pink' />
+      </div>
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default async function Home({ params: { locale } }) {
     <>
       <div className="page-container">
         <div className="section">
-          <Hero locale={locale} />
+          <Hero locale={locale} color='black' />
         </div>
         <div className="section bg-gray-100 dark:bg-gray-800 rounded mt-20">
           <h2 className="text-2xl font-bold px-2 py-4">{t('')}</h2>

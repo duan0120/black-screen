@@ -18,13 +18,13 @@ export default function MyNavbar({ locale = 'en' }) {
 
   return (
     <Navbar classNames={{
-      wrapper: "page-container"
+      wrapper: "nav-container"
     }}>
       <NavbarBrand>
         <Link href="/" className="text-foreground">
           <img src="/images/logo.png" alt="Black-Screen-Tool" width={32} height={32} />
           <p className="font-bold text-inherit mx-3 text-2xl">
-            Black Screen
+            {t('Black Screen')}
           </p>
         </Link>
       </NavbarBrand>
@@ -36,7 +36,7 @@ export default function MyNavbar({ locale = 'en' }) {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden md:flex">
+        <NavbarItem className="hidden md:flex gap-4">
           <LanguageSwitcher locale={locale} />
           <ThemeSwitcher />
         </NavbarItem>
