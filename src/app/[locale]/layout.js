@@ -13,7 +13,7 @@ import baseCanonical from "@/lib/baseCanonical";
 
 export async function generateMetadata({ params }) {
   const title = 'Black Screen - Fullscreen Focus, OLED & Pixel Testing';
-  const description = 'FFree Black Screen for fullscreen focus, OLED power saving, and display testing. Use black, white, red, green, and more for pixel checks and downloads.';
+  const description = 'Free Black Screen for fullscreen focus, OLED power saving, and display testing. Use black, white, red, green, and more for pixel checks and downloads.';
   const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/og.png`;
 
   return {
