@@ -69,5 +69,11 @@
   "Color Switch Interval (seconds, 0 for none)": "Color Switch Interval (seconds, 0 for none)",
   "Exit Fullscreen Time (minutes, 0 for none)": "Exit Fullscreen Time (minutes, 0 for none)",
   "0 means no color switching": "0 means no color switching",
-  "0 means no auto exit": "0 means no auto exit"
+  "0 means no auto exit": "0 means no auto exit",
+  "Black Screen Interval (minutes)": "Black Screen Interval (minutes)",
+  "Black Screen Duration (seconds)": "Black Screen Duration (seconds)",
+  "Enable Dynamic Pattern (Burn-in Protection)": "Enable Dynamic Pattern (Burn-in Protection)",
+  "Start OLED Protection": "Start OLED Protection",
+  "Stop OLED Protection": "Stop OLED Protection",
+  "POLED Protection: Prevent burn-in with periodic fullscreen black screen and dynamic pattern. Set interval/duration, enable pattern, and start protection.": "POLED Protection: Prevent burn-in with periodic fullscreen black screen and dynamic pattern. Set interval/duration, enable pattern, and start protection."
 }

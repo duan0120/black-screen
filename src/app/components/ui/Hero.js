@@ -6,7 +6,8 @@ import {
   Link,
   Select, SelectItem,
   NumberInput,
-  Tabs, Tab
+  Tabs, Tab,
+  Checkbox
 } from '@heroui/react';
 import clsx from 'clsx';
 import { useState, useEffect, useCallback, useRef } from 'react';
@@ -146,8 +147,15 @@ export default function Hero({ locale = 'en', color = 'black' }) {
   // 记录当前选中的 Tab
   const [currentTab, setCurrentTab] = useState('download');
 
+  // OLED 保护相关状态
+  const [dynamicPattern, setDynamicPattern] = useState(true); // 是否启用动态图案
+
   // 使用 ref 来避免循环依赖
   const exitFullscreenRef = useRef(null);
+
+  // OLED 保护相关的 ref
+  const oledCanvasRef = useRef(null);
+  const oledAnimationRef = useRef(null);
 
   // 管理定时器的 useEffect
   useEffect(() => {
@@ -234,7 +242,140 @@ export default function Hero({ locale = 'en', color = 'black' }) {
     };
   }, [isFullscreen, switchTime, exitTime, colorBeforeFullscreen]); // 依赖关键状态
 
+  // OLED 保护功能
+  const createDynamicPattern = useCallback((canvas) => {
+    const ctx = canvas.getContext('2d');
+    let x = 0, y = 0, dx = 1, dy = 1;
 
+    const drawPattern = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillRect(x, y, 10, 10);
+
+      x += dx;
+      y += dy;
+
+      if (x >= canvas.width || x < 0) dx = -dx;
+      if (y >= canvas.height || y < 0) dy = -dy;
+
+      oledAnimationRef.current = requestAnimationFrame(drawPattern);
+    };
+
+    drawPattern();
+  }, []);
+
+  const startOledCycle = useCallback(() => {
+    console.log('Starting OLED protection');
+
+    // 立即进入黑屏保护
+    const fullscreenDiv = document.createElement('div');
+    fullscreenDiv.setAttribute('data-oled-protection', 'true');
+    fullscreenDiv.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000000;
+        z-index: 9999;
+        cursor: pointer;
+      `;
+
+    // 如果启用动态图案，创建移动的白点
+    if (dynamicPattern) {
+      const canvas = document.createElement('canvas');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      canvas.style.cssText = `
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        `;
+
+      fullscreenDiv.appendChild(canvas);
+      oledCanvasRef.current = canvas;
+      createDynamicPattern(canvas);
+    }
+
+    // 添加退出提示
+    const exitHint = document.createElement('div');
+    exitHint.style.cssText = `
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+      `;
+    exitHint.textContent = 'Press ESC to exit OLED Protection';
+    fullscreenDiv.appendChild(exitHint);
+
+    // 退出函数
+    const exitOledProtection = () => {
+      console.log('exitOledProtection called');
+      if (document.body.contains(fullscreenDiv)) {
+        document.body.removeChild(fullscreenDiv);
+        if (oledAnimationRef.current) {
+          cancelAnimationFrame(oledAnimationRef.current);
+        }
+
+      }
+    };
+
+    // 点击退出
+    fullscreenDiv.addEventListener('click', exitOledProtection);
+
+    document.body.appendChild(fullscreenDiv);
+
+    // 进入全屏
+    if (fullscreenDiv.requestFullscreen) {
+      fullscreenDiv.requestFullscreen().catch(err => {
+        console.log('Failed to enter fullscreen for OLED protection:', err);
+      });
+    }
+
+
+  }, [dynamicPattern, createDynamicPattern]);
+
+  const startOledProtection = useCallback(() => {
+    console.log('Starting OLED Protection');
+
+    // 如果已经有OLED保护在运行，先停止它
+    const existingOledDiv = document.querySelector('[data-oled-protection]');
+    if (existingOledDiv) {
+      stopOledProtection();
+    }
+
+    startOledCycle();
+  }, [startOledCycle]);
+
+  const stopOledProtection = useCallback(() => {
+    console.log('Stopping OLED Protection');
+
+    if (oledAnimationRef.current) {
+      cancelAnimationFrame(oledAnimationRef.current);
+    }
+
+    // 如果当前有OLED保护屏幕，移除它
+    const existingOledDiv = document.querySelector('[data-oled-protection]');
+    console.log('Found OLED div to remove:', !!existingOledDiv);
+    if (existingOledDiv) {
+      try {
+        // 如果在全屏模式，先退出全屏
+        if (document.fullscreenElement === existingOledDiv) {
+          document.exitFullscreen().catch(err => {
+            console.log('Failed to exit fullscreen:', err);
+          });
+        }
+        document.body.removeChild(existingOledDiv);
+        console.log('OLED protection div removed successfully');
+      } catch (error) {
+        console.error('Error removing OLED protection div:', error);
+      }
+    }
+  }, []);
 
   // 根据背景颜色计算合适的文字颜色
   const getTextColor = (bgColor) => {
@@ -379,6 +520,11 @@ export default function Hero({ locale = 'en', color = 'black' }) {
           if (isFullscreen) {
             exitFullscreen();
           }
+          // 检查是否有OLED保护屏幕，如果有就停止它
+          const oledDiv = document.querySelector('[data-oled-protection]');
+          if (oledDiv) {
+            stopOledProtection();
+          }
           break;
         case ' ':
           event.preventDefault();
@@ -419,7 +565,7 @@ export default function Hero({ locale = 'en', color = 'black' }) {
       document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
       document.removeEventListener('msfullscreenchange', handleFullscreenChange);
     };
-  }, [isFullscreen, enterFullscreen, exitFullscreen, toggleFullscreen]);
+  }, [isFullscreen, enterFullscreen, exitFullscreen, toggleFullscreen, stopOledProtection]);
 
   // 全屏时的渲染
   if (isFullscreen) {
@@ -581,8 +727,7 @@ export default function Hero({ locale = 'en', color = 'black' }) {
                   min={0}
                   max={300}
                   endContent="s"
-                  description={t('0 means no color switching')}
-                  className="w-full"
+                  className="w-full mb-4"
                 />
                 <NumberInput
                   label={t('Exit Fullscreen Time (minutes, 0 for none)')}
@@ -591,8 +736,7 @@ export default function Hero({ locale = 'en', color = 'black' }) {
                   min={0}
                   max={60}
                   endContent="min"
-                  description={t('0 means no auto exit')}
-                  className="w-full"
+                  className="w-full mb-4"
                 />
                 <Button color="primary" onPress={enterFullscreen} className="w-full sm:w-auto">{t('Start Timer')}</Button>
               </CardBody>
@@ -602,10 +746,24 @@ export default function Hero({ locale = 'en', color = 'black' }) {
             <Card>
               <CardBody className='px-4 sm:px-6'>
 
-                <Button color="primary" className="w-full sm:w-auto">{t('Start OLED Protection')}</Button>
+                <div className='mb-4'>
+                  <Checkbox
+                    isSelected={dynamicPattern}
+                    onValueChange={setDynamicPattern}
+                  >
+                    {t('Enable Dynamic Pattern (Burn-in Protection)')}
+                  </Checkbox>
+                </div>
+                <Button
+                  color="primary"
+                  onPress={startOledProtection}
+                  className="w-full sm:w-auto"
+                >
+                  {t('Start OLED Protection')}
+                </Button>
               </CardBody>
               <CardFooter className='px-4 sm:px-6'>
-                <p className='text-sm text-gray-500'>{t('POLED Protection: Prevent burn-in with periodic fullscreen black screen and dynamic pattern. Set interval/duration, enable pattern, and start protection.')}</p>
+                <p className='text-sm text-gray-500 text-left'>{t('OLED Protection: Prevent burn-in with fullscreen black screen and optional dynamic pattern. Enable pattern if desired, then start protection.')}</p>
               </CardFooter>
             </Card>
           </Tab>
