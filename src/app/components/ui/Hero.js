@@ -369,7 +369,7 @@ export default function Hero({ locale = 'en', color = 'black' }) {
             <h3 className="text-lg font-semibold">{t('Color Selection')}</h3>
           </CardHeader>
           <CardBody className='px-4 sm:px-6'>
-            <div className='grid grid-cols-2 sm:flex sm:items-center gap-4 sm:flex-wrap'>
+            <div className='grid grid-cols-2 gap-4 sm:flex sm:items-center sm:flex-wrap'>
               {Object.keys(colorDatas).map((colorKey) => (
                 <Button
                   key={colorKey}
@@ -389,7 +389,7 @@ export default function Hero({ locale = 'en', color = 'black' }) {
                   {colorDatas[colorKey].label}
                 </Button>
               ))}
-              <div className="relative min-w-[90px] h-10 rounded-medium cursor-pointer overflow-hidden col-span-2 sm:col-span-1 w-full sm:w-auto">
+              <div className="relative min-w-[90px] h-10 rounded-medium cursor-pointer overflow-hidden w-full sm:w-auto">
                 <input
                   type="color"
                   value={colorValue}
