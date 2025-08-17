@@ -65,5 +65,9 @@
   "Orange": "Orange",
   "Pink": "Pink",
   "Purple": "Purple",
-  "Cycle": "Cycle"
+  "Cycle": "Cycle",
+  "Color Switch Interval (seconds, 0 for none)": "Color Switch Interval (seconds, 0 for none)",
+  "Exit Fullscreen Time (minutes, 0 for none)": "Exit Fullscreen Time (minutes, 0 for none)",
+  "0 means no color switching": "0 means no color switching",
+  "0 means no auto exit": "0 means no auto exit"
 }

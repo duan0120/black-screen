@@ -9,7 +9,7 @@ import {
   Tabs, Tab
 } from '@heroui/react';
 import clsx from 'clsx';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 
 
 export default function Hero({ locale = 'en', color = 'black' }) {
@@ -133,9 +133,108 @@ export default function Hero({ locale = 'en', color = 'black' }) {
   const [width, setWidth] = useState(1920);
   const [height, setHeight] = useState(1080);
 
-  const [delayTime, setDelayTime] = useState(0);
   const [switchTime, setSwitchTime] = useState(0);
   const [exitTime, setExitTime] = useState(0);
+
+  // 定时器相关状态
+  const [colorSwitchTimer, setColorSwitchTimer] = useState(null);
+  const [exitTimer, setExitTimer] = useState(null);
+
+  // 记录进入全屏前的颜色
+  const [colorBeforeFullscreen, setColorBeforeFullscreen] = useState(null);
+
+  // 记录当前选中的 Tab
+  const [currentTab, setCurrentTab] = useState('download');
+
+  // 使用 ref 来避免循环依赖
+  const exitFullscreenRef = useRef(null);
+
+  // 管理定时器的 useEffect
+  useEffect(() => {
+    if (!isFullscreen) {
+      // 不在全屏模式，清除所有定时器
+      if (colorSwitchTimer) {
+        clearInterval(colorSwitchTimer);
+        setColorSwitchTimer(null);
+      }
+      if (exitTimer) {
+        clearTimeout(exitTimer);
+        setExitTimer(null);
+      }
+
+      // 如果有记录的颜色，恢复到进入全屏前的颜色
+      if (colorBeforeFullscreen) {
+        console.log('Restoring color after fullscreen:', colorBeforeFullscreen);
+        setColorValue(colorBeforeFullscreen);
+        setColorBeforeFullscreen(null); // 清除记录
+      }
+
+      return;
+    }
+
+    // 在全屏模式下启动定时器
+    console.log('Setting up timers in fullscreen mode:', { switchTime, exitTime, colorValue });
+
+    // 启动颜色切换定时器
+    if (switchTime > 0 && !colorSwitchTimer) {
+      console.log('Starting color switch timer with interval:', switchTime, 'seconds');
+
+      // 准备颜色循环数组
+      const fixedColorOrder = ['black', 'white', 'red', 'green', 'blue', 'yellow', 'orange', 'pink', 'purple'];
+      const currentColorKey = fixedColorOrder.find(key => colorDatas[key].colorValue === colorValue);
+
+      let cycleArray;
+      let currentIndex;
+
+      if (currentColorKey) {
+        // 当前颜色在预设颜色中
+        currentIndex = fixedColorOrder.indexOf(currentColorKey);
+        cycleArray = fixedColorOrder.map(key => colorDatas[key].colorValue);
+      } else {
+        // 当前颜色不在预设颜色中，将其加入到数组最后
+        cycleArray = [...fixedColorOrder.map(key => colorDatas[key].colorValue), colorValue];
+        currentIndex = cycleArray.length - 1; // 从自定义颜色开始
+      }
+
+      console.log('Color cycle setup:', { cycleArray, currentIndex, currentColor: colorValue });
+
+      // 使用闭包来维护当前索引
+      let index = currentIndex;
+
+      const colorTimer = setInterval(() => {
+        index = (index + 1) % cycleArray.length;
+        const nextColor = cycleArray[index];
+        console.log('Color switch timer triggered. Index:', index, 'Color:', nextColor);
+        setColorValue(nextColor);
+      }, switchTime * 1000);
+
+      setColorSwitchTimer(colorTimer);
+    }
+
+    // 启动退出全屏定时器
+    if (exitTime > 0 && !exitTimer) {
+      console.log('Starting exit timer with duration:', exitTime, 'minutes');
+      const exitTimerRef = setTimeout(() => {
+        console.log('Exit timer triggered, exiting fullscreen');
+        if (exitFullscreenRef.current) {
+          exitFullscreenRef.current();
+        }
+      }, exitTime * 60 * 1000);
+      setExitTimer(exitTimerRef);
+    }
+
+    // 清理函数
+    return () => {
+      if (colorSwitchTimer) {
+        clearInterval(colorSwitchTimer);
+      }
+      if (exitTimer) {
+        clearTimeout(exitTimer);
+      }
+    };
+  }, [isFullscreen, switchTime, exitTime, colorBeforeFullscreen]); // 依赖关键状态
+
+
 
   // 根据背景颜色计算合适的文字颜色
   const getTextColor = (bgColor) => {
@@ -154,6 +253,12 @@ export default function Hero({ locale = 'en', color = 'black' }) {
 
   // 进入全屏模式
   const enterFullscreen = useCallback(() => {
+    // 如果设置了颜色切换定时器，记录当前颜色
+    if (switchTime > 0) {
+      console.log('Recording color before fullscreen:', colorValue);
+      setColorBeforeFullscreen(colorValue);
+    }
+
     // 隐藏页面滚动条
     document.body.style.overflow = 'hidden';
     document.documentElement.style.overflow = 'hidden';
@@ -172,7 +277,8 @@ export default function Hero({ locale = 'en', color = 'black' }) {
     setTimeout(() => {
       setShowFullscreenTip(false);
     }, 3000);
-  }, []);
+
+  }, [switchTime, colorValue]);
 
   // 退出全屏模式
   const exitFullscreen = useCallback(() => {
@@ -189,6 +295,11 @@ export default function Hero({ locale = 'en', color = 'black' }) {
     }
     setIsFullscreen(false);
   }, []);
+
+  // 将 exitFullscreen 函数赋值给 ref
+  useEffect(() => {
+    exitFullscreenRef.current = exitFullscreen;
+  }, [exitFullscreen]);
 
   // 切换全屏模式
   const toggleFullscreen = useCallback(() => {
@@ -244,6 +355,17 @@ export default function Hero({ locale = 'en', color = 'black' }) {
   // 键盘事件处理
   useEffect(() => {
     const handleKeyDown = (event) => {
+      // 如果焦点在输入框上，不处理快捷键
+      const activeElement = document.activeElement;
+      if (activeElement && (
+        activeElement.tagName === 'INPUT' ||
+        activeElement.tagName === 'TEXTAREA' ||
+        activeElement.contentEditable === 'true' ||
+        activeElement.getAttribute('role') === 'textbox'
+      )) {
+        return;
+      }
+
       switch (event.key) {
         case 'f':
         case 'F':
@@ -282,6 +404,7 @@ export default function Hero({ locale = 'en', color = 'black' }) {
       } else {
         document.body.style.overflow = '';
         document.documentElement.style.overflow = '';
+
       }
     };
 
@@ -418,6 +541,8 @@ export default function Hero({ locale = 'en', color = 'black' }) {
         </Card>
         <Tabs
           aria-label="Options"
+          selectedKey={currentTab}
+          onSelectionChange={setCurrentTab}
           className='w-full'
           classNames={{
             tabList: "flex-col sm:flex-row w-full sm:w-auto",
@@ -439,15 +564,51 @@ export default function Hero({ locale = 'en', color = 'black' }) {
                   ))}
                 </Select>
                 <div className='flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4'>
-                  <NumberInput label={t('Width')} value={width} onChange={setWidth} endContent="px" className="w-full sm:w-auto" />
-                  <NumberInput label={t('Height')} value={height} onChange={setHeight} endContent="px" className="w-full sm:w-auto" />
+                  <NumberInput label={t('Width')} value={width} onValueChange={setWidth} endContent="px" className="w-full sm:w-auto" />
+                  <NumberInput label={t('Height')} value={height} onValueChange={setHeight} endContent="px" className="w-full sm:w-auto" />
                 </div>
                 <Button color="primary" onPress={handleDownload} className="w-full sm:w-auto">{t('Download Image')}</Button>
               </CardBody>
             </Card>
           </Tab>
-          <Tab key="download" title={t('Timer Settings')}></Tab>
-          <Tab key="download" title={t('OLED Protection Settings')}></Tab>
+          <Tab key="timer" title={t('Timer Settings')}>
+            <Card>
+              <CardBody className='px-4 sm:px-6'>
+                <NumberInput
+                  label={t('Color Switch Interval (seconds, 0 for none)')}
+                  value={switchTime}
+                  onValueChange={setSwitchTime}
+                  min={0}
+                  max={300}
+                  endContent="s"
+                  description={t('0 means no color switching')}
+                  className="w-full"
+                />
+                <NumberInput
+                  label={t('Exit Fullscreen Time (minutes, 0 for none)')}
+                  value={exitTime}
+                  onValueChange={setExitTime}
+                  min={0}
+                  max={60}
+                  endContent="min"
+                  description={t('0 means no auto exit')}
+                  className="w-full"
+                />
+                <Button color="primary" onPress={enterFullscreen} className="w-full sm:w-auto">{t('Start Timer')}</Button>
+              </CardBody>
+            </Card>
+          </Tab>
+          <Tab key="oled" title={t('OLED Protection Settings')}>
+            <Card>
+              <CardBody className='px-4 sm:px-6'>
+
+                <Button color="primary" className="w-full sm:w-auto">{t('Start OLED Protection')}</Button>
+              </CardBody>
+              <CardFooter className='px-4 sm:px-6'>
+                <p className='text-sm text-gray-500'>{t('POLED Protection: Prevent burn-in with periodic fullscreen black screen and dynamic pattern. Set interval/duration, enable pattern, and start protection.')}</p>
+              </CardFooter>
+            </Card>
+          </Tab>
         </Tabs>
       </div>
     </div >
