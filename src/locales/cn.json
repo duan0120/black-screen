@@ -1,1 +1,26 @@
-{}
+{
+    "Focus Mode (Pomodoro)": "专注模式（番茄钟）",
+    "Work Duration (minutes)": "工作时长（分钟）",
+    "Break Duration (minutes)": "休息时长（分钟）",
+    "Cycles": "循环次数",
+    "Break Color": "休息颜色",
+    "Enter fullscreen immediately": "立即进入全屏",
+    "Start Timer": "开始计时",
+    "Stop Timer": "停止计时",
+    "Work Time": "工作时间",
+    "Break Time": "休息时间",
+    "Break Time! Switch to fullscreen?": "休息时间！切换到全屏？",
+    "Focus Mode Completed!": "专注模式完成！",
+    "Click anywhere to exit": "点击任意位置退出",
+    "Enter fullscreen for break": "进入全屏休息",
+    "Cycle": "循环",
+    "Black": "黑色",
+    "White": "白色",
+    "Red": "红色",
+    "Green": "绿色",
+    "Blue": "蓝色",
+    "Yellow": "黄色",
+    "Orange": "橙色",
+    "Pink": "粉色",
+    "Purple": "紫色"
+}
