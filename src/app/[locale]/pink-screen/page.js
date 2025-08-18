@@ -60,7 +60,17 @@ export default function BlueScreenPage({ params }) {
           <p className='mb-4'>{t("")}</p>
           <ul className='list-disc pl-6 space-y-2 mb-4'>
             <li><strong>{t("")}</strong>: {t("")}</li>
+            <li><strong>{t("")}</strong>: {t("")}</li>
+            <li><strong>{t("")}</strong>: {t("")}</li>
+            <li><strong>{t("")}</strong>: {t("")}</li>
+            <li><strong>{t("")}</strong>: {t("")}</li>
+            <li><strong>{t("")}</strong>: {t("")}</li>
+            <li><strong>{t("")}</strong>: {t("")}</li>
+            <li><strong>{t("")}</strong>: {t("")}</li>
+            <li><strong>{t("")}</strong>: {t("")}</li>
+            <li><strong>{t("")}</strong>: {t("")}</li>
           </ul>
+          <p className='mt-4'>{t("")}</p>
         </div>
       </div>
     </div>
