@@ -745,8 +745,8 @@ export default function Hero({ locale = 'en', color = 'black' }) {
           <Tab key="oled" title={t('OLED Protection Settings')}>
             <Card>
               <CardBody className='px-4 sm:px-6'>
-
-                <div className='mb-4'>
+                <p className='text-sm text-gray-500 text-left'>{t('OLED Protection: Prevent burn-in with fullscreen black screen and optional dynamic pattern. Enable pattern if desired, then start protection.')}</p>
+                <div className='my-4'>
                   <Checkbox
                     isSelected={dynamicPattern}
                     onValueChange={setDynamicPattern}
@@ -762,9 +762,6 @@ export default function Hero({ locale = 'en', color = 'black' }) {
                   {t('Start OLED Protection')}
                 </Button>
               </CardBody>
-              <CardFooter className='px-4 sm:px-6'>
-                <p className='text-sm text-gray-500 text-left'>{t('OLED Protection: Prevent burn-in with fullscreen black screen and optional dynamic pattern. Enable pattern if desired, then start protection.')}</p>
-              </CardFooter>
             </Card>
           </Tab>
         </Tabs>

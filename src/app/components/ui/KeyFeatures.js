@@ -1,22 +1,15 @@
 import { getTranslation } from '@/lib/i18n';
 import { Card, CardHeader, CardBody } from '@heroui/react';
 
-export default function KeyFeatures({ locale = 'en' }) {
+export default function KeyFeatures({ locale = 'en', title, keyFeatures }) {
   const t = function (key) {
     return getTranslation(locale, key);
   }
 
-  const keyFeatures = [
-    {
-      title: t(""),
-      description: t(""),
-    },
-  ]
-
   return (
     <>
-      <h3 className="text-2xl font-bold px-2 py-4">{t('Key Features of Our Black Screen Tool')}</h3>
-      < div className="flex flex-wrap gap-8 justify-between md:justify-start" >
+      <h2 className="text-2xl font-bold px-2 py-4">{title}</h2>
+      <div className="flex flex-wrap gap-8 justify-between md:justify-start" >
         {
           keyFeatures.map((feature) => (
             <Card
@@ -27,7 +20,7 @@ export default function KeyFeatures({ locale = 'en' }) {
               key={feature.title}
             >
               <CardHeader className="justify-between gap-5">
-                <h2 className="text-lg font-bold px-2">{feature.title}</h2>
+                <h3 className="text-lg font-bold px-2">{feature.title}</h3>
               </CardHeader>
               <CardBody>
                 <p>{feature.description}</p>
