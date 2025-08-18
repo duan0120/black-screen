@@ -47,7 +47,7 @@ export default async function Home({ params: { locale } }) {
           <h2 className="text-2xl font-bold px-2 py-4">{t('Discover the Power of Black Screen Tool')}</h2>
           <div className="px-2">
             <p>
-              {t('The Black Screen Tool stands out as a free, innovative utility crafted to boost productivity, safeguard display health, and simplify screen testing. At its heart, the Black Screen delivers a sleek fullscreen experience, ideal for deep focus, OLED Protection, and pixel diagnostics. With an array of colors—black, white, red, green, blue, yellow, orange, pink, purple, and custom options—it meets diverse user needs without requiring registration. This tool blends practicality with user-friendliness, serving as an essential resource for anyone seeking a distraction-free workspace or reliable screen maintenance. Whether you’re a professional, gamer, or casual user, the Black Screen enhances your digital experience with its versatile features.')}
+              {t("The Black Screen Tool stands out as a free, innovative utility crafted to boost productivity, safeguard display health, and simplify screen testing. At its heart, the Black Screen delivers a sleek fullscreen experience, ideal for deep focus, OLED Protection, and pixel diagnostics. With an array of colors—black, white, red, green, blue, yellow, orange, pink, purple, and custom options—it meets diverse user needs without requiring registration. This tool blends practicality with user-friendliness, serving as an essential resource for anyone seeking a distraction-free workspace or reliable screen maintenance. Whether you're a professional, gamer, or casual user, the Black Screen enhances your digital experience with its versatile features.")}
             </p>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default async function Home({ params: { locale } }) {
               <li><strong>{t("Enhance Productivity")}</strong>: {t("Utilize the Black Screen in fullscreen mode with white to create a distraction-free zone for work or study sessions.")}</li>
               <li><strong>{t("Conduct Display Diagnostics")}</strong>: {t("Test for dead pixels and backlight issues using Black Screen colors like red, green, and blue, mimicking tools like blacktestscreen.com.")}</li>
               <li><strong>{t("Protect OLED Displays")}</strong>: {t("Activate OLED Protection on the Black Screen to prevent burn-in during extended use, similar to ASUS OLED Care recommendations.")}</li>
-              <li><strong>{t("Support Creative Endeavors")}</strong>: {t("Download 4K Black Screen images with custom colors for video editing or design backgrounds, rivaling whitescreen.online’s offerings.")}</li>
+              <li><strong>{t("Support Creative Endeavors")}</strong>: {t("Download 4K Black Screen images with custom colors for video editing or design backgrounds, rivaling whitescreen.online's offerings.")}</li>
               <li><strong>{t("Promote Eye Comfort")}</strong>: {t("Set a timer on the Black Screen to cycle colors, reducing eye strain during long hours, a feature absent in static competitors.")}</li>
               <li><strong>{t("Resolve Tech Issues")}</strong>: {t("Use fullscreen mode on the Black Screen to troubleshoot monitor problems with a range of color options, outpacing basic black screen tools.")}</li>
             </ul>

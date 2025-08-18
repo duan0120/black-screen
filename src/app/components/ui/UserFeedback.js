@@ -30,7 +30,7 @@ export default function UserFeedback({ locale = 'en' }) {
     {
       name: 'Tom Smith',
       title: t('IT Support'),
-      description: t('Testing with Black Screen’s red and green modes fixed display issues fast—saved me hours!"'),
+      description: t("Testing with Black Screen's red and green modes fixed display issues fast—saved me hours!"),
     },
     {
       name: 'Lisa Kim',
