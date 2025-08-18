@@ -46,6 +46,23 @@ export default function BlueScreenPage({ params }) {
       <div className="section">
         <Hero locale={locale} color='pink' />
       </div>
+      <div className="section bg-gray-100 dark:bg-gray-800 rounded mt-20">
+        <h2 className="text-2xl font-bold px-2 py-4">{t("")}</h2>
+        <div className="px-2">
+          <p>
+            {t("")}
+          </p>
+        </div>
+      </div>
+      <div id="use-case" className='section bg-gray-100 dark:bg-gray-800 rounded mt-20'>
+        <h2 className="text-2xl font-bold px-2 py-4">{t("")}</h2>
+        <div className="px-2">
+          <p className='mb-4'>{t("")}</p>
+          <ul className='list-disc pl-6 space-y-2 mb-4'>
+            <li><strong>{t("")}</strong>: {t("")}</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
