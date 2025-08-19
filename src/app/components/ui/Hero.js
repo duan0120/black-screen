@@ -18,8 +18,6 @@ export default function Hero({ locale = 'en', color = 'black' }) {
   const [isHovered, setIsHovered] = useState(false);
   const [showFullscreenTip, setShowFullscreenTip] = useState(false);
 
-  const lang = locale === 'en' ? '' : locale;
-
   const t = function (key) {
     return getTranslation(locale, key);
   }
@@ -30,63 +28,63 @@ export default function Hero({ locale = 'en', color = 'black' }) {
       colorValue: "#000000",
       label: t('Black'),
       labelTextColor: "text-white",
-      path: `${lang}/`,
+      path: `/`,
     },
     white: {
       title: t('White Screen Tool'),
       colorValue: "#ffffff",
       label: t('White'),
       labelTextColor: "text-black",
-      path: `${lang}/white-screen`,
+      path: `/white-screen`,
     },
     red: {
       title: t('Red Screen Tool'),
       colorValue: "#ff0000",
       label: t('Red'),
       labelTextColor: "text-white",
-      path: `${lang}/red-screen`,
+      path: `/red-screen`,
     },
     green: {
       title: t('Green Screen Tool'),
       colorValue: "#00ff00",
       label: t('Green'),
       labelTextColor: "text-black",
-      path: `${lang}/green-screen`,
+      path: `/green-screen`,
     },
     blue: {
       title: t('Blue Screen Tool'),
       colorValue: "#0000ff",
       label: t('Blue'),
       labelTextColor: "text-white",
-      path: `${lang}/blue-screen`,
+      path: `/blue-screen`,
     },
     yellow: {
       title: t('Yellow Screen Tool'),
       colorValue: "#ffff00",
       label: t('Yellow'),
       labelTextColor: "text-black",
-      path: `${lang}/yellow-screen`,
+      path: `/yellow-screen`,
     },
     orange: {
       title: t('Orange Screen Tool'),
       colorValue: "#FFA500",
       label: t('Orange'),
       labelTextColor: "text-black",
-      path: `${lang}/orange-screen`,
+      path: `/orange-screen`,
     },
     pink: {
       title: t('Pink Screen Tool'),
       colorValue: "#FF69B4",
       label: t('Pink'),
       labelTextColor: "text-black",
-      path: `${lang}/pink-screen`,
+      path: `/pink-screen`,
     },
     purple: {
       title: t('Purple Screen Tool'),
       colorValue: "#800080",
       label: t('Purple'),
       labelTextColor: "text-white",
-      path: `${lang}/purple-screen`,
+      path: `/purple-screen`,
     },
   };
 
