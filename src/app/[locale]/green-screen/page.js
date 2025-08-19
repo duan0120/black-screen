@@ -57,7 +57,7 @@ export default function BlueScreenPage({ params }) {
       <div id="use-case" className='section bg-gray-100 dark:bg-gray-800 rounded mt-20'>
         <h2 className="text-2xl font-bold px-2 py-4">{t("Expansive Use Cases for Green Screen Tool")}</h2>
         <div className="px-2">
-          <p className='mb-4'>{t("Dive into the broad applications of the green screen with ten diverse use cases, showcasing the green screen tool's versatility in full screen mode. Inspired by practical needs and competitor insights like whitescreen.online, these scenarios highlight its value across multiple domains.")}</p>
+          <p className='mb-4'>{t("Dive into the broad applications of the green screen with ten diverse use cases, showcasing the green screen tool's versatility in full screen mode. Inspired by practical needs and competitor insights, these scenarios highlight its value across multiple domains.")}</p>
           <ul className='list-disc pl-6 space-y-2 mb-4'>
             <li><strong>{t("Chroma Key Video Production")}</strong>: {t("Utilize the green screen in full screen mode for flawless background removal in videos, a go-to for YouTubers and filmmakers.")}</li>
             <li><strong>{t("Pixel Accuracy Testing")}</strong>: {t("Employ the green screen tool's green screen to identify dead pixels or color distortions, ideal for display technicians and quality control.")}</li>

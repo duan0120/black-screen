@@ -57,7 +57,7 @@ export default function BlueScreenPage({ params }) {
       <div id="use-case" className='section bg-gray-100 dark:bg-gray-800 rounded mt-20'>
         <h2 className="text-2xl font-bold px-2 py-4">{t("Versatile Use Cases for Yellow Screen Tool")}</h2>
         <div className="px-2">
-          <p className='mb-4'>{t("Unveil the extensive applications of the yellow screen through ten diverse use cases, showcasing the yellow screen tool's adaptability in full screen mode. Inspired by practical needs and insights from competitors like whitescreen.online, these scenarios highlight its utility across various domains.")}</p>
+          <p className='mb-4'>{t("Unveil the extensive applications of the yellow screen through ten diverse use cases, showcasing the yellow screen tool's adaptability in full screen mode. Inspired by practical needs and insights from competitors, these scenarios highlight its utility across various domains.")}</p>
           <ul className='list-disc pl-6 space-y-2 mb-4'>
             <li><strong>{t("Color Calibration Accuracy")}</strong>: {t("Use the yellow screen in full screen mode to fine-tune yellow tones, essential for photographers and graphic designers calibrating displays.")}</li>
             <li><strong>{t("Display Quality Evaluation")}</strong>: {t("Employ the yellow screen tool's yellow screen to spot color inaccuracies or dead pixels, a key task for IT specialists and display technicians.")}</li>

@@ -57,7 +57,7 @@ export default function BlueScreenPage({ params }) {
       <div id="use-case" className='section bg-gray-100 dark:bg-gray-800 rounded mt-20'>
         <h2 className="text-2xl font-bold px-2 py-4">{t("Diverse Use Cases for White Screen Tool")}</h2>
         <div className="px-2">
-          <p className='mb-4'>{t("Unlock the extensive potential of the white screen through ten unique use cases, showcasing the white screen tool's adaptability in the full screen environment. Inspired by practical needs and insights from competitors like whitescreen.online, these scenarios highlight its broad appeal.")}</p>
+          <p className='mb-4'>{t("Unlock the extensive potential of the white screen through ten unique use cases, showcasing the white screen tool's adaptability in the full screen environment. Inspired by practical needs and insights from competitors, these scenarios highlight its broad appeal.")}</p>
           <ul className='list-disc pl-6 space-y-2 mb-4'>
             <li><strong>{t("Display Quality Testing")}</strong>: {t("Leverage the white screen in full screen mode to detect dead pixels and backlight inconsistencies, a must-have for IT professionals and display technicians calibrating monitors.")}</li>
             <li><strong>{t("Screen Cleaning Efficiency")}</strong>: {t("Use the white screen tool's bright white screen to spotlight smudges, dust, and fingerprints, making it ideal for cleaning laptops, TVs, or office displays with ease.")}</li>

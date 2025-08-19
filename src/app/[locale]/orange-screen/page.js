@@ -57,7 +57,7 @@ export default function BlueScreenPage({ params }) {
       <div id="use-case" className='section bg-gray-100 dark:bg-gray-800 rounded mt-20'>
         <h2 className="text-2xl font-bold px-2 py-4">{t("Broad Use Cases for Orange Screen Tool")}</h2>
         <div className="px-2">
-          <p className='mb-4'>{t("Uncover the extensive applications of the orange screen through ten varied use cases, highlighting the orange screen tool's flexibility in full screen mode. Drawing inspiration from practical needs and competitor insights like whitescreen.online, these scenarios demonstrate its wide-ranging utility.")}</p>
+          <p className='mb-4'>{t("Uncover the extensive applications of the orange screen through ten varied use cases, highlighting the orange screen tool's flexibility in full screen mode. Drawing inspiration from practical needs and competitor insights, these scenarios demonstrate its wide-ranging utility.")}</p>
           <ul className='list-disc pl-6 space-y-2 mb-4'>
             <li><strong>{t("Color Calibration Precision")}</strong>: {t("Use the orange screen in full screen mode to fine-tune warm color tones, essential for photographers and graphic designers calibrating displays.")}</li>
             <li><strong>{t("Display Quality Assessment")}</strong>: {t("Employ the orange screen tool's orange screen to spot color inaccuracies or dead pixels, a critical task for IT professionals and display experts.")}</li>

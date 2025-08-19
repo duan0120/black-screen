@@ -57,7 +57,7 @@ export default function BlueScreenPage({ params }) {
       <div id="use-case" className='section bg-gray-100 dark:bg-gray-800 rounded mt-20'>
         <h2 className="text-2xl font-bold px-2 py-4">{t("Innovative Use Cases for Pink Screen Tool")}</h2>
         <div className="px-2">
-          <p className='mb-4'>{t("Explore the diverse applications of the pink screen through ten creative use cases, showcasing the pink screen tool's versatility in full screen mode. Inspired by practical needs and insights from competitors like whitescreen.online, these scenarios highlight its appeal across various domains.")}</p>
+          <p className='mb-4'>{t("Explore the diverse applications of the pink screen through ten creative use cases, showcasing the pink screen tool's versatility in full screen mode. Inspired by practical needs and insights from competitors, these scenarios highlight its appeal across various domains.")}</p>
           <ul className='list-disc pl-6 space-y-2 mb-4'>
             <li><strong>{t("Creative Project Inspiration")}</strong>: {t("Use the pink screen in full screen mode as a bold backdrop for designing posters or digital art, perfect for graphic designers.")}</li>
             <li><strong>{t("Color Testing Accuracy")}</strong>: {t("Employ the pink screen tool's pink screen to verify pink tones and detect color imbalances, essential for display calibration experts.")}</li>

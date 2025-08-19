@@ -57,7 +57,7 @@ export default function BlueScreenPage({ params }) {
       <div id="use-case" className='section bg-gray-100 dark:bg-gray-800 rounded mt-20'>
         <h2 className="text-2xl font-bold px-2 py-4">{t("Versatile Use Cases for Blue Screen Tool")}</h2>
         <div className="px-2">
-          <p className='mb-4'>{t("Discover the wide-ranging applications of the blue screen through ten diverse use cases, highlighting the blue screen tool's adaptability in full screen mode. Drawing inspiration from practical needs and competitor insights like blacktestscreen.com, these scenarios showcase its utility across various contexts.")}</p>
+          <p className='mb-4'>{t("Discover the wide-ranging applications of the blue screen through ten diverse use cases, highlighting the blue screen tool's adaptability in full screen mode. Drawing inspiration from practical needs and competitor insights, these scenarios showcase its utility across various contexts.")}</p>
           <ul className='list-disc pl-6 space-y-2 mb-4'>
             <li><strong>{t("RGB Channel Calibration")}</strong>: {t("Use the blue screen in full screen mode to fine-tune the blue channel, essential for photographers and video editors calibrating monitors.")}</li>
             <li><strong>{t("Display Color Testing")}</strong>: {t("Employ the blue screen tool's blue screen to identify color inaccuracies or dead pixels, a key task for IT specialists and display technicians.")}</li>

@@ -53,7 +53,7 @@ export default async function BlogPost({ params }) {
               startContent={<RiArrowLeftLine className="w-4 h-4" />}
               className="mb-4"
             >
-              {t('Back to Blog')}
+              Back to Blog
             </Button>
           </Link>
 

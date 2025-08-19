@@ -15,13 +15,21 @@ export const locales = {
     name: "English",
     locales: enLocales
   },
-  "zh-CN": {
-    name: "简体中文",
-    locales: cnLocales
+  "fr": {
+    name: "Français",
+    locales: frLocales
   },
-  "zh-HK": {
-    name: "繁體中文",
-    locales: hkLocales
+  "de": {
+    name: "Deutsch",
+    locales: deLocales
+  },
+  "tr": {
+    name: "Türkçe",
+    locales: trLocales
+  },
+  "es": {
+    name: "Español",
+    locales: esLocales
   },
   "ja": {
     name: "日本語",
@@ -43,17 +51,13 @@ export const locales = {
     name: "Italiano",
     locales: itLocales
   },
-  "fr": {
-    name: "Français",
-    locales: frLocales
+  "zh-CN": {
+    name: "简体中文",
+    locales: cnLocales
   },
-  "de": {
-    name: "Deutsch",
-    locales: deLocales
-  },
-  "tr": {
-    name: "Türkçe",
-    locales: trLocales
+  "zh-HK": {
+    name: "繁體中文",
+    locales: hkLocales
   },
 };
 

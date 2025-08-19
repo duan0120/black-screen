@@ -57,7 +57,7 @@ export default function BlueScreenPage({ params }) {
       <div id="use-case" className='section bg-gray-100 dark:bg-gray-800 rounded mt-20'>
         <h2 className="text-2xl font-bold px-2 py-4">{t("Extensive Use Cases for Red Screen Tool")}</h2>
         <div className="px-2">
-          <p className='mb-4'>{t("Explore the wide-ranging applications of the red screen through ten diverse use cases, showcasing the red screen tool's versatility in full screen mode. Inspired by practical needs and insights from competitors like blacktestscreen.com, these scenarios highlight its utility across various fields.")}</p>
+          <p className='mb-4'>{t("Explore the wide-ranging applications of the red screen through ten diverse use cases, showcasing the red screen tool's versatility in full screen mode. Inspired by practical needs and insights from competitors, these scenarios highlight its utility across various fields.")}</p>
           <ul className='list-disc pl-6 space-y-2 mb-4'>
             <li><strong>{t("RGB Channel Calibration")}</strong>: {t("Utilize the red screen in full screen mode to fine-tune the red channel, crucial for photographers and video editors calibrating displays.")}</li>
             <li><strong>{t("Display Color Testing")}</strong>: {t("Employ the red screen tool's red screen to pinpoint color inaccuracies or dead pixels, a vital task for IT specialists and display technicians.")}</li>

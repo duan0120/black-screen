@@ -80,9 +80,9 @@ export default async function Home({ params: { locale } }) {
             <p className='mb-4'>{t("Unlock the potential of the Black Screen across six unique scenarios, inspired by competitor applications and user needs, to showcase its versatility.")}</p>
             <ul className='list-disc pl-6 space-y-2 mb-4'>
               <li><strong>{t("Enhance Productivity")}</strong>: {t("Utilize the Black Screen in fullscreen mode with white to create a distraction-free zone for work or study sessions.")}</li>
-              <li><strong>{t("Conduct Display Diagnostics")}</strong>: {t("Test for dead pixels and backlight issues using Black Screen colors like red, green, and blue, mimicking tools like blacktestscreen.com.")}</li>
+              <li><strong>{t("Conduct Display Diagnostics")}</strong>: {t("Test for dead pixels and backlight issues using Black Screen colors like red, green, and blue, mimicking tools.")}</li>
               <li><strong>{t("Protect OLED Displays")}</strong>: {t("Activate OLED Protection on the Black Screen to prevent burn-in during extended use, similar to ASUS OLED Care recommendations.")}</li>
-              <li><strong>{t("Support Creative Endeavors")}</strong>: {t("Download 4K Black Screen images with custom colors for video editing or design backgrounds, rivaling whitescreen.online's offerings.")}</li>
+              <li><strong>{t("Support Creative Endeavors")}</strong>: {t("Download 4K Black Screen images with custom colors for video editing or design backgrounds.")}</li>
               <li><strong>{t("Promote Eye Comfort")}</strong>: {t("Set a timer on the Black Screen to cycle colors, reducing eye strain during long hours, a feature absent in static competitors.")}</li>
               <li><strong>{t("Resolve Tech Issues")}</strong>: {t("Use fullscreen mode on the Black Screen to troubleshoot monitor problems with a range of color options, outpacing basic black screen tools.")}</li>
             </ul>

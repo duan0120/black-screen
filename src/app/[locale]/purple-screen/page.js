@@ -57,7 +57,7 @@ export default function BlueScreenPage({ params }) {
       <div id="use-case" className='section bg-gray-100 dark:bg-gray-800 rounded mt-20'>
         <h2 className="text-2xl font-bold px-2 py-4">{t("Dynamic Use Cases for Purple Screen Tool")}</h2>
         <div className="px-2">
-          <p className='mb-4'>{t("Delve into the wide-ranging applications of the purple screen through ten creative use cases, showcasing the purple screen tool's versatility in full screen mode. Inspired by practical needs and insights from competitors like whitescreen.online, these scenarios highlight its appeal across various fields.")}</p>
+          <p className='mb-4'>{t("Delve into the wide-ranging applications of the purple screen through ten creative use cases, showcasing the purple screen tool's versatility in full screen mode. Inspired by practical needs and insights from competitors, these scenarios highlight its appeal across various fields.")}</p>
           <ul className='list-disc pl-6 space-y-2 mb-4'>
             <li><strong>{t("Creative Project Inspiration")}</strong>: {t("Use the purple screen in full screen mode as a unique backdrop for designing logos or digital art, perfect for graphic designers.")}</li>
             <li><strong>{t("Color Testing Precision")}</strong>: {t("Employ the purple screen tool's purple screen to verify purple tones and detect color imbalances, essential for display calibration experts.")}</li>
