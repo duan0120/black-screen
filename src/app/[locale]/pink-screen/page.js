@@ -66,7 +66,7 @@ export default function BlueScreenPage({ params }) {
             <li><strong>{t("Photography Color Checks")}</strong>: {t("Photographers can use the pink screen tool's pink screen as a unique lighting test or portrait background for creative shoots.")}</li>
             <li><strong>{t("Gaming Aesthetic Enhancement")}</strong>: {t("Gamers can activate the pink screen in full screen to customize monitor settings, adding a playful pink vibe to gameplay.")}</li>
             <li><strong>{t("Presentation Design Boost")}</strong>: {t("Download pink screen images from the pink screen tool for vibrant, trendy slide backgrounds in marketing or educational presentations.")}</li>
-            <li><strong>{t("Eye Comfort During Breaks")}</strong>: {t("Switch to the pink screen in full screen mode to reduce eye strain, offering a soothing contrast for long screen sessions at 07:24 AM CST on Tuesday, August 19, 2025.")}</li>
+            <li><strong>{t("Eye Comfort During Breaks")}</strong>: {t("Switch to the pink screen in full screen mode to reduce eye strain, offering a soothing contrast for long screen sessions.")}</li>
             <li><strong>{t("Device Color Diagnostics")}</strong>: {t("Tech enthusiasts can use the pink screen tool's full screen pink display to diagnose screen burn-in or color accuracy issues.")}</li>
             <li><strong>{t("Educational Art Lessons")}</strong>: {t("Teachers can project the pink screen in full screen mode to teach color theory or inspire art projects, supported by free access.")}</li>
           </ul>

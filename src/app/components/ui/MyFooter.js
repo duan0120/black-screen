@@ -99,7 +99,7 @@ export default function MyFooter({ locale = 'en' }) {
             <p className="text-xl font-bold mb-2 w-fit">{t('Black Screen')}</p>
             <Link href="/" target="_blank"><Chip color="danger" size="sm" variant="flat" className="ml-2 -mt-1.5">v{process.env.APP_VERSION}</Chip></Link>
           </div>
-          <p className="text-sm text-gray-500 mb-7">{t('')}</p>
+          <p className="text-sm text-gray-500 mb-7">{t('Explore Black Screen for fullscreen mode, OLED Protection, and high-quality image downloads – your free solution for testing and calibration.')}</p>
           <div className='flex gap-4'>
             {socialLinks.map((item, index) => (
               <Link href={item.url} target="_blank" key={index}
