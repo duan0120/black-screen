@@ -14,6 +14,54 @@ export default async function sitemap() {
         changeFrequency: 'daily',
         priority: 1.0,
       },
+      {
+        url: `${baseUrl}${lang}/white-screen`,
+        lastModified: new Date(),
+        changeFrequency: 'daily',
+        priority: 1.0,
+      },
+      {
+        url: `${baseUrl}${lang}/red-screen`,
+        lastModified: new Date(),
+        changeFrequency: 'daily',
+        priority: 1.0,
+      },
+      {
+        url: `${baseUrl}${lang}/green-screen`,
+        lastModified: new Date(),
+        changeFrequency: 'daily',
+        priority: 1.0,
+      },
+      {
+        url: `${baseUrl}${lang}/blue-screen`,
+        lastModified: new Date(),
+        changeFrequency: 'daily',
+        priority: 1.0,
+      },
+      {
+        url: `${baseUrl}${lang}/yellow-screen`,
+        lastModified: new Date(),
+        changeFrequency: 'daily',
+        priority: 1.0,
+      },
+      {
+        url: `${baseUrl}${lang}/orange-screen`,
+        lastModified: new Date(),
+        changeFrequency: 'daily',
+        priority: 1.0,
+      },
+      {
+        url: `${baseUrl}${lang}/pink-screen`,
+        lastModified: new Date(),
+        changeFrequency: 'daily',
+        priority: 1.0,
+      },
+      {
+        url: `${baseUrl}${lang}/purple-screen`,
+        lastModified: new Date(),
+        changeFrequency: 'daily',
+        priority: 1.0,
+      },
     ];
   }).flat();
 
