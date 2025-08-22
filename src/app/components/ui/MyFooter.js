@@ -90,7 +90,7 @@ export default function MyFooter({ locale = 'en' }) {
     },
     {
       name: "String Art Generator",
-      url: "https://stringartgenerator.cc/"
+      url: "https://stringartgenerator.cc"
     }
   ]
 
