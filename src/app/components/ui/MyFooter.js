@@ -88,6 +88,10 @@ export default function MyFooter({ locale = 'en' }) {
       name: "Brat Generator",
       url: "https://brat-gen.com",
     },
+    {
+      name: "String Art Generator",
+      url: "https://stringartgenerator.cc/"
+    }
   ]
 
   return (
