@@ -1,0 +1,31 @@
+name: Deploy to Vercel (Account B)
+
+on:
+  push:
+    branches: [master] # 需要的话改成你的分支
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+      - run: npm run build # Next.js/其他框架按需调整
+
+      - run: npm i -g vercel
+
+      # 从 Vercel 拉取项目配置（env等），非必须但推荐
+      - run: vercel pull --yes --environment=production --token $VERCEL_TOKEN
+
+      # 预构建并部署到账号 B
+      - run: vercel build --prod --token $VERCEL_TOKEN
+      - run: vercel deploy --prebuilt --prod --token $VERCEL_TOKEN
