@@ -17,6 +17,8 @@ export default function FeaturedOn() {
       </a>
       <span className="mx-2">|</span>
       <a href="https://twelve.tools" target="_blank"><img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" className='h-[36px] w-auto' /></a>
+      <span className="mx-2">|</span>
+      <a title="ai tools code.market" href="https://code.market?code.market=verified"><img alt="ai tools code.market" title="ai tools code.market" src="https://code.market/assets/manage-product/featured-logo-bright.svg" className='h-[36px] w-auto' /></a>
     </div>
   )
 }
