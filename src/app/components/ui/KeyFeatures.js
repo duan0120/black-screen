@@ -15,7 +15,7 @@ export default function KeyFeatures({ locale = 'en', title, keyFeatures }) {
             <Card
               shadow="none"
               disableRipple
-              className="select-none box-border border-foreground/10 border-[1px] min-w-[160px]  max-w-full md:max-w-[30%]  p-2 flex-shrink-0 bg-gray-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out"
+              className="select-none box-border border-foreground/10 border-[1px] min-w-[160px]  max-w-full md:max-w-[30%]  p-2 flex-shrink-0 hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out"
               radius="lg"
               key={feature.title}
             >
