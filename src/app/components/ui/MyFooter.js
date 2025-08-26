@@ -153,6 +153,7 @@ export default function MyFooter({ locale = 'en' }) {
             <p className="font-bold mb-2">{t('Contact Us')}</p>
             <Link href="mailto:support@crazykids.tech" className="text-sm hover:text-primary mb-4">support@crazykids.tech</Link>
           </div>
+          <a href="https://www.producthunt.com/products/black-screen-7?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-black&#0045;screen&#0045;7" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1008877&theme=light&t=1756248996725" alt="Black&#0032;Screen - Fullscreen&#0032;focus&#0044;&#0032;oled&#0032;&#0038;&#0032;pixel&#0032;testing | Product Hunt" className='w-auto h-[54px]' /></a>
         </div>
       </div>
       <div className="nav-container">
