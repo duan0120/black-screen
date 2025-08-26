@@ -15,6 +15,8 @@ export default function FeaturedOn() {
       <a href="https://submitaitools.org" target="_blank" >
         <img src="https://submitaitools.org/static_submitaitools/images/submitaitools.png" alt="Submit AI Tools – The ultimate platform to discover, submit, and explore the best AI tools across various categories." className='h-[36px] w-auto' />
       </a>
+      <span className="mx-2">|</span>
+      <a href="https://twelve.tools" target="_blank"><img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" className='h-[36px] w-auto' /></a>
     </div>
   )
 }
