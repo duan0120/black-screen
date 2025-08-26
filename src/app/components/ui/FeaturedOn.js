@@ -11,6 +11,10 @@ export default function FeaturedOn() {
       <a href="https://turbo0.com/item/black-screen" target="_blank" rel="noopener noreferrer">
         <img src="https://img.turbo0.com/badge-listed-light.svg" alt="Listed on Turbo0" className='h-[36px] w-auto' />
       </a>
+      <span className="mx-2">|</span>
+      <a href="https://submitaitools.org" target="_blank" >
+        <img src="https://submitaitools.org/static_submitaitools/images/submitaitools.png" alt="Submit AI Tools – The ultimate platform to discover, submit, and explore the best AI tools across various categories." className='h-[36px] w-auto' />
+      </a>
     </div>
   )
 }
