@@ -2,7 +2,7 @@ name: Deploy to Vercel (Account B)
 
 on:
   push:
-    branches: [master] # 需要的话改成你的分支
+    branches: [master]
 
 jobs:
   deploy:
@@ -11,21 +11,41 @@ jobs:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      # 安装 pnpm
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 10.14.0 # 与 Vercel 日志一致
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: "pnpm"
 
-      - run: npm ci
-      - run: npm run build # Next.js/其他框架按需调整
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+        env:
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
 
-      - run: npm i -g vercel
+      - name: Build
+        run: pnpm build
+        env:
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
 
-      # 从 Vercel 拉取项目配置（env等），非必须但推荐
-      - run: vercel pull --yes --environment=production --token $VERCEL_TOKEN
+      - name: Install Vercel CLI
+        run: pnpm add -g vercel
 
-      # 预构建并部署到账号 B
-      - run: vercel build --prod --token $VERCEL_TOKEN
-      - run: vercel deploy --prebuilt --prod --token $VERCEL_TOKEN
+      - name: Pull Vercel environment
+        run: vercel pull --yes --environment=production --token $VERCEL_TOKEN
+
+      - name: Build for Vercel
+        run: vercel build --prod --token $VERCEL_TOKEN
+        env:
+          VERCEL_PNPM_VERSION: 10.14.0
+
+      - name: Deploy to Vercel
+        run: vercel deploy --prebuilt --prod --token $VERCEL_TOKEN
