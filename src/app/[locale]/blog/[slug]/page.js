@@ -18,9 +18,7 @@ export async function generateMetadata({ params }) {
   return {
     title: title,
     description: description,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/blog/${params.slug}`,
-    }
+    alternates: generateAlternates(`/blog/${slug}`, currentLocale),
   }
 }
 
