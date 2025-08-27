@@ -29,7 +29,7 @@ export default function CurrentPage() {
     {
       name: 'GitHub Respository',
       url: 'https://github.com/devutils-online/blackscreen',
-      desc: 'The Ultimate Free Tool for Display Testing and Calibration',
+      desc: 'The respository for this website.',
     },
     {
       name: 'Tap Bio',
