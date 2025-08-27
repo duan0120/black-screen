@@ -61,7 +61,7 @@ export default async function sitemap() {
         lastModified: new Date(),
         changeFrequency: 'daily',
         priority: 1.0,
-      }
+      },
     ];
   }).flat();
 
