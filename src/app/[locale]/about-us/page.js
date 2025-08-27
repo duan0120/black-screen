@@ -88,6 +88,10 @@ export default function CurrentPage() {
         <p className="text-lg leading-relaxed">
           Have questions about <strong>Black Screen</strong>’s <strong>Black Screen Tool</strong>? Reach out at <a href="mailto:support@crazykids.tech" className="text-blue-600">support@crazykids.tech</a>.
         </p>
+        <p className="text-lg leading-relaxed mt-2">
+          You can also find me on other platforms where I share projects and ideas.
+          <a href="/external-links" className="text-blue-600">See all my profiles here.</a>
+        </p>
       </div>
     </div>
   );
