@@ -61,7 +61,7 @@ export default async function sitemap() {
         lastModified: new Date(),
         changeFrequency: 'daily',
         priority: 1.0,
-      },
+      }
     ];
   }).flat();
 
@@ -89,6 +89,12 @@ export default async function sitemap() {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}${lang}/external-links`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1.0,
     },
   ];
 
