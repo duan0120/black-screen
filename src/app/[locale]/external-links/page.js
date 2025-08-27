@@ -1,15 +1,15 @@
 import Link from "next/link";
+import { generateAlternates } from "@/lib/hreflang";
 
 export async function generateMetadata({ params }) {
   const title = 'My External Profiles';
   const description = 'A collection of my external profiles and links to help search engines discover my site.';
+  const currentLocale = params.locale || 'en';
 
   return {
     title: title,
     description: description,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/external-links`,
-    },
+    alternates: generateAlternates('/external-links', currentLocale),
   }
 }
 

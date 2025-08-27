@@ -1,18 +1,18 @@
 import { getTranslation } from '@/lib/i18n';
 import Hero from '@/app/components/ui/Hero';
+import { generateAlternates } from "@/lib/hreflang";
 
 
 export async function generateMetadata({ params }) {
   const title = 'Green Screen for Fullscreen Chroma Key & Testing';
   const description = 'Free green screen for chroma key video production and pixel testing in fullscreen mode. Ensure vibrant green display and download high-resolution images.';
   const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/green-og.png`;
+  const currentLocale = params.locale || 'en';
 
   return {
     title: title,
     description: description,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/green-screen`,
-    },
+    alternates: generateAlternates('/green-screen', currentLocale),
     openGraph: {
       title: title,
       description: description,

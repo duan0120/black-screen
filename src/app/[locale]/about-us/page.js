@@ -1,13 +1,14 @@
+import { generateAlternates } from "@/lib/hreflang";
+
 export async function generateMetadata({ params }) {
   const title = 'About Us';
   const description = 'We are a dynamic team of developers driven by a passion to make social media content accessible to all.';
+  const currentLocale = params.locale || 'en';
 
   return {
     title: title,
     description: description,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/about-us`,
-    },
+    alternates: generateAlternates('/about-us', currentLocale),
   }
 }
 

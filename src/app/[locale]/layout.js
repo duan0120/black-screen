@@ -8,13 +8,14 @@ import { Providers } from "../providers";
 
 import MyNavbar from '../components/ui/MyNavbar';
 import MyFooter from '../components/ui/MyFooter';
-import baseCanonical from "@/lib/baseCanonical";
+import { generateAlternates } from "@/lib/hreflang";
 
 
 export async function generateMetadata({ params }) {
   const title = 'Black Screen - Fullscreen Focus, OLED & Pixel Testing';
   const description = 'Free Black Screen for fullscreen focus, OLED power saving, and display testing. Use black, white, red, green, and more for pixel checks and downloads.';
   const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/og.png`;
+  const currentLocale = params.locale || 'en';
 
   return {
     title: {
@@ -24,9 +25,7 @@ export async function generateMetadata({ params }) {
     description: description,
     authors: [{ name: 'Black Screen' }],
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-    alternates: {
-      canonical: baseCanonical(params.locale),
-    },
+    alternates: generateAlternates('', currentLocale),
     openGraph: {
       title: title,
       description: description,

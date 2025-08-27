@@ -4,9 +4,11 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@heroui/react';
 import { RiArrowLeftLine } from '@remixicon/react';
+import { generateAlternates } from "@/lib/hreflang";
 
 export async function generateMetadata({ params }) {
   const slug = params.slug;
+  const currentLocale = params.locale || 'en';
 
   const postData = await getPostData(slug);
 

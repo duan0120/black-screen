@@ -1,13 +1,14 @@
+import { generateAlternates } from "@/lib/hreflang";
+
 export async function generateMetadata({ params }) {
   const title = 'Privacy Policy';
   const description = 'Learn how we collect, use, and protect your data.';
+  const currentLocale = params.locale || 'en';
 
   return {
     title: title,
     description: description,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/privay-policy`,
-    }
+    alternates: generateAlternates('/privacy-policy', currentLocale),
   }
 }
 

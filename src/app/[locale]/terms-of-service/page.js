@@ -1,13 +1,14 @@
+import { generateAlternates } from "@/lib/hreflang";
+
 export async function generateMetadata({ params }) {
   const title = 'Terms of Service';
-  const description = 'Terms of Service for Brat-Gen.';
+  const description = 'Terms of Service for Black Screen.';
+  const currentLocale = params.locale || 'en';
 
   return {
     title: title,
     description: description,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/terms-of-service`,
-    }
+    alternates: generateAlternates('/terms-of-service', currentLocale),
   }
 }
 

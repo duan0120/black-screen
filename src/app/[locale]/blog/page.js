@@ -2,16 +2,16 @@ import { getSortedPostsData } from '@/lib/blog';
 import { getTranslation } from '@/lib/i18n';
 import Link from 'next/link';
 import { Card, CardBody, CardHeader } from '@heroui/react';
+import { generateAlternates } from "@/lib/hreflang";
 
 
 export async function generateMetadata({ params }) {
   const title = 'Blog';
+  const currentLocale = params.locale || 'en';
 
   return {
     title: title,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/blog`,
-    }
+    alternates: generateAlternates('/blog', currentLocale),
   }
 }
 

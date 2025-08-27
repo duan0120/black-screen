@@ -1,18 +1,18 @@
 import { getTranslation } from '@/lib/i18n';
 import Hero from '@/app/components/ui/Hero';
+import { generateAlternates } from "@/lib/hreflang";
 
 
 export async function generateMetadata({ params }) {
   const title = 'White Screen for Fullscreen Testing & Cleaning';
   const description = 'Free white screen for display testing and screen cleaning in fullscreen mode. Detect dead pixels and smudges with a bright white display. Download images.';
   const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/white-og.png`;
+  const currentLocale = params.locale || 'en';
 
   return {
     title: title,
     description: description,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/white-screen`,
-    },
+    alternates: generateAlternates('/white-screen', currentLocale),
     openGraph: {
       title: title,
       description: description,

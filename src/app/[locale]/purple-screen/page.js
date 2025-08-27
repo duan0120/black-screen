@@ -1,18 +1,18 @@
 import { getTranslation } from '@/lib/i18n';
 import Hero from '@/app/components/ui/Hero';
+import { generateAlternates } from "@/lib/hreflang";
 
 
 export async function generateMetadata({ params }) {
   const title = 'Purple Screen for Fullscreen Creative & Color Testing';
   const description = 'Free purple screen for creative projects and color testing in fullscreen mode. Ensure vibrant purple display and download high-resolution images.';
   const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/purple-og.png`;
+  const currentLocale = params.locale || 'en';
 
   return {
     title: title,
     description: description,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/purple-screen`,
-    },
+    alternates: generateAlternates('/purple-screen', currentLocale),
     openGraph: {
       title: title,
       description: description,

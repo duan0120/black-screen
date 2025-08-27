@@ -1,18 +1,18 @@
 import { getTranslation } from '@/lib/i18n';
 import Hero from '@/app/components/ui/Hero';
+import { generateAlternates } from "@/lib/hreflang";
 
 
 export async function generateMetadata({ params }) {
   const title = 'Yellow Screen for Fullscreen Testing & Calibration';
   const description = 'Free yellow screen for display testing and color calibration in fullscreen mode. Check yellow channel accuracy and download high-resolution images.';
   const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/yellow-og.png`;
+  const currentLocale = params.locale || 'en';
 
   return {
     title: title,
     description: description,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/yellow-screen`,
-    },
+    alternates: generateAlternates('/yellow-screen', currentLocale),
     openGraph: {
       title: title,
       description: description,

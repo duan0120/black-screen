@@ -1,18 +1,18 @@
 import { getTranslation } from '@/lib/i18n';
 import Hero from '@/app/components/ui/Hero';
+import { generateAlternates } from "@/lib/hreflang";
 
 
 export async function generateMetadata({ params }) {
   const title = 'Blue Screen for Fullscreen Calibration & Testing';
   const description = 'Free blue screen for display calibration and RGB testing in fullscreen mode. Check blue channel accuracy and download high-resolution images.';
   const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/blue-og.png`;
+  const currentLocale = params.locale || 'en';
 
   return {
     title: title,
     description: description,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/blue-screen`,
-    },
+    alternates: generateAlternates('/blue-screen', currentLocale),
     openGraph: {
       title: title,
       description: description,
