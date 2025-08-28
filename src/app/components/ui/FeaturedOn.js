@@ -21,6 +21,8 @@ export default function FeaturedOn() {
       <a title="ai tools code.market" href="https://code.market?code.market=verified"><img alt="ai tools code.market" title="ai tools code.market" src="https://code.market/assets/manage-product/featured-logo-bright.svg" className='h-[36px] w-auto' /></a>
       <span className="mx-2">|</span>
       <a href="https://kontext-ai.com/">Kontext AI</a>
+      <span className="mx-2">|</span>
+      <a href="https://goodaitools.com"><img src="https://goodaitools.com/assets/images/badge.png" alt="Good AI Tools" className='h-[36px] w-auto' /></a>
     </div>
   )
 }
