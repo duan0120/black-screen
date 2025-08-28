@@ -115,6 +115,11 @@ export default function CurrentPage() {
       name: 'Black Screen | Product Hunt',
       url: 'https://www.producthunt.com/products/black-screen-7',
       desc: 'My Product Hunt page for Black Screen.',
+    },
+    {
+      name: 'Bio Site',
+      url: 'https://bio.site/blackscreen',
+      desc: 'My Bio Site homepage and profile links.',
     }
   ];
 
